@@ -2106,11 +2106,11 @@ svg {
 .call:active svg,
 .cart:active svg,
 .likes:active svg {
-  fill: #1E8A47;
+  fill: rgba(255, 255, 255, 0.8);
 }
 .call--catalog:hover svg,
 .call--catalog:active svg {
-  fill: #1E8A47;
+  fill: rgba(255, 255, 255, 0.8);
 }
 .home-v2 {
   width: 100%;
