@@ -533,7 +533,6 @@ svg {
 }
 .footer-small__social {
   display: flex;
-  flex-wrap: wrap;
   align-items: center;
 }
 @media (max-width: 350px) {
