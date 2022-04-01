@@ -1304,13 +1304,13 @@ a:active .icon:before {
   order: 3;
 }
 .city--header:hover .city__geo svg {
-  fill: #1E8A47;
+  fill: rgba(255, 255, 255, 0.8);
 }
 .city--header:hover .city__name {
-  color: #1E8A47;
+  color: rgba(255, 255, 255, 0.8);
 }
 .city--header:hover .city__arrow svg {
-  stroke: #1E8A47;
+  stroke: rgba(255, 255, 255, 0.8);
 }
 @media (min-width: 1600px) {
   .likes--header-catalog {
@@ -1636,7 +1636,7 @@ label[for="sale"] {
   height: 100%;
 }
 .search-input--sidebar__form-wrapper.active {
-  width: calc(721px + (100vw - 1600px) / 2);
+  width: calc(713px + (100vw - 1600px) / 2);
   background-color: #e6e6e6;
 }
 .phone--sidebar svg {
