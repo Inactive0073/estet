@@ -1,0 +1,1502 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/nouislider.min.css">
+    <link rel="preload" href="assets/fonts/lora-regular.woff" as="font" type="font/woff">
+    <link rel="preload" href="assets/fonts/lora-regular.woff2" as="font" type="font/woff2">
+    <link rel="preload" href="assets/fonts/lora-bold.woff" as="font" type="font/woff">
+    <link rel="preload" href="assets/fonts/lora-bold.woff2" as="font" type="font/woff2">
+    <link rel="preload" href="assets/fonts/open-sans-regular.woff" as="font" type="font/woff">
+    <link rel="preload" href="assets/fonts/open-sans-regular.woff2" as="font" type="font/woff2">
+    <link rel="preload" href="assets/fonts/open-sans-semi-bold.woff" as="font" type="font/woff">
+    <link rel="preload" href="assets/fonts/open-sans-semi-bold.woff2" as="font" type="font/woff2">
+    <link rel="preload" href="assets/fonts/open-sans-bold.woff" as="font" type="font/woff">
+    <link rel="preload" href="assets/fonts/open-sans-bold.woff2" as="font" type="font/woff2">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="assets/images/favicon/site.webmanifest">
+    <link rel="mask-icon" href="assets/images/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" type="text/css" href="assets/css/style-mobile.css">
+    <link rel="stylesheet" href="assets/css/style-tablet.css" media="(min-width: 768px)">
+    <link rel="stylesheet" href="assets/css/style-desktop.css" media="(min-width: 1280px)">
+    <title>Catalog</title>
+</head>
+
+<body>
+    <div class="page-wrapper">
+        <header class="header header--v2">
+            <a href="javascript:void(0);" title="" class="search search--catalog">
+                <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M8.65768 17.2973C3.89596 17.2973 0 13.4054 0 8.64864C0 3.89189 3.89596 0 8.65768 0C13.4194 0 17.3154 3.89189 17.3154 8.64864C17.3154 10.8082 16.5124 12.7895 15.1899 14.3093L20.6052 19.719C20.865 19.9784 20.865 20.3676 20.6052 20.627C20.5186 20.7567 20.3454 20.8 20.1723 20.8C19.9992 20.8 19.826 20.7567 19.6962 20.627L14.2777 15.2142C12.7625 16.5113 10.7975 17.2973 8.65768 17.2973ZM8.65768 1.2973C4.58858 1.2973 1.29866 4.58378 1.29866 8.64864C1.29866 12.7135 4.58858 16 8.65768 16C12.7268 16 16.0167 12.7135 16.0167 8.64864C16.0167 4.58378 12.7268 1.2973 8.65768 1.2973Z" />
+                </svg>
+            </a>
+            <a href="javascript:void(0);" title="" class="call--catalog">
+                <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M0 4.64492C0.267892 3.17877 1.47513 1.62945 2.67195 0.4908V0.490708C3.57863 -0.118954 4.49873 -0.210215 5.43464 0.500554L8.157 3.08129C8.78757 3.70332 8.80065 4.80729 8.39899 5.662C8.12051 6.0409 7.82529 6.42288 7.53071 6.80402C7.35486 7.03155 7.17924 7.25877 7.00756 7.48486C6.88822 7.92237 7.10489 8.37637 7.4512 8.79917C7.89674 9.37039 8.56833 10.0037 9.18636 10.5864C9.29932 10.6929 9.4105 10.7978 9.51818 10.9002C10.203 11.5519 11.0554 12.3428 11.7969 12.8478C11.8195 12.8631 11.8432 12.8793 11.8679 12.8961C12.1876 13.1147 12.6697 13.4444 13.0976 13.2985L14.9326 12.013C15.8172 11.5914 16.9118 11.5605 17.7558 12.224L20.4883 14.8239C21.1433 15.4691 21.1973 16.727 20.4883 17.4047C19.4133 18.3687 17.6409 19.8081 16.2031 19.9567C14.574 20.192 12.8676 19.4434 11.1516 18.3257C9.43563 17.208 7.6966 15.6715 6.09003 14.1428C2.84605 11.0562 0.0403717 7.71828 0 4.64492ZM7.2395 3.95416L4.52722 1.36379L4.52724 1.36375C4.16862 1.19812 3.91629 1.12671 3.5593 1.38283C2.33649 2.61892 1.49254 3.75012 1.30075 4.68311C1.37004 6.99591 3.86855 10.2923 7.00763 13.2792C8.58821 14.7831 10.2802 16.2681 11.8776 17.3086C13.4704 18.346 14.9472 18.8956 16.0015 18.7476C16.9612 18.5679 17.8502 17.865 18.7093 17.1856C19.0062 16.9508 19.2995 16.7189 19.591 16.5123C19.7305 16.2081 19.7682 15.9835 19.5708 15.6872L16.8484 13.0969C16.4387 12.8951 16.0714 12.8879 15.6183 13.0585C15.4618 13.168 15.3052 13.2775 15.1486 13.387C14.7201 13.6866 14.2916 13.9861 13.8639 14.2867C13.0062 14.8276 11.856 14.4048 11.0407 13.855C10.2163 13.2935 9.40465 12.52 8.74083 11.8874C8.69681 11.8455 8.65344 11.8041 8.61076 11.7635C8.47431 11.6337 8.32889 11.4985 8.17842 11.3586C7.58876 10.8104 6.92159 10.1902 6.41271 9.53773C5.80011 8.74536 5.36878 7.76376 5.96906 6.75557L7.25966 5.07662C7.38838 4.68283 7.48172 4.32468 7.2395 3.95416Z" />
+                </svg>
+            </a>
+            <a href="javascript:void(0);" title="" class="lang lang--catalog">
+                Ru
+            </a>
+            <a href="index.html" title="" class="logo logo--catalog">
+                <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M4.95183 34.8548H34.8548V4.95183H4.95183V34.8548ZM9.91351 25.3541H27.2549L29.8934 30.3064H9.91351V25.3541ZM25.8374 17.4932H9.91351V22.4451H25.8384L25.8374 17.4932ZM9.91351 9.50021H29.8934L27.2041 14.4528H9.91351V9.50021ZM0 39.8064H39.8067V0H0V39.8064Z" />
+                </svg>
+            </a>
+            <a href="javascript:void(0);" class="likes likes--header-catalog">
+                <svg width="100%" height="100%" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M16.4048 1.62257C15.9072 1.10889 15.3155 0.701108 14.6636 0.422648C14.0117 0.14419 13.3126 0.000554678 12.6064 0C11.2707 0.000223829 9.98366 0.514591 9.00023 1.44126C8.01689 0.514435 6.72986 4.30653e-05 5.39404 0C4.68701 0.000754581 3.9871 0.144829 3.3346 0.42393C2.68209 0.703032 2.08988 1.11165 1.59203 1.62627C-0.531429 3.81221 -0.530526 7.23127 1.59384 9.40796L9.00023 17L16.4066 9.40796C18.531 7.23127 18.5319 3.81221 16.4048 1.62257Z" />
+                </svg>
+                <span class="counter counter--catalog">
+                    1
+                </span>
+            </a>
+            <a href="javascript:void(0);" class="cart cart--catalog">
+                <svg width="22" height="21" viewBox="0 0 22 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M5.879 5.724L7.261 12.597C7.316 12.875 7.469 13.126 7.691 13.304C7.914 13.482 8.206 13.593 8.479 13.571H17.327C17.623 13.594 17.905 13.482 18.127 13.304C18.349 13.126 18.502 12.875 18.557 12.597L19.874 5.724H5.879ZM6.941 14.24C6.499 13.886 6.195 13.386 6.085 12.832L4.564 5.273C4.559 5.253 4.555 5.233 4.552 5.213L3.745 1.2H0.6C0.269 1.2 0 0.932 0 0.6C0 0.268 0.269 0 0.6 0H4.236C4.522 0 4.768 0.202 4.825 0.482L5.638 4.524H20.6C20.779 4.524 20.949 4.604 21.063 4.742C21.177 4.88 21.223 5.061 21.19 5.237L19.735 12.828C19.623 13.386 19.319 13.886 18.878 14.24C18.436 14.594 17.871 14.766 17.316 14.771H8.491C8.476 14.771 8.461 14.772 8.445 14.772C7.907 14.772 7.371 14.584 6.941 14.24ZM7.873 18.391C7.702 18.391 7.564 18.527 7.564 18.695C7.564 18.863 7.702 19 7.873 19C8.043 19 8.182 18.863 8.182 18.695C8.182 18.527 8.043 18.391 7.873 18.391ZM7.873 20.2C7.041 20.2 6.363 19.525 6.363 18.695C6.363 17.866 7.041 17.19 7.873 17.19C8.705 17.19 9.382 17.866 9.382 18.695C9.382 19.525 8.705 20.2 7.873 20.2ZM17.873 18.391C17.702 18.391 17.564 18.527 17.564 18.695C17.564 18.863 17.702 19 17.873 19C18.043 19 18.182 18.863 18.182 18.695C18.182 18.527 18.043 18.391 17.873 18.391ZM17.873 20.2C17.041 20.2 16.363 19.525 16.363 18.695C16.363 17.866 17.041 17.19 17.873 17.19C18.705 17.19 19.382 17.866 19.382 18.695C19.382 19.525 18.705 20.2 17.873 20.2Z" />
+                </svg>
+                <span class="counter counter--catalog">
+                    100
+                </span>
+            </a>
+            <a href="javascript: void(0);" title="" class="city city--header">
+                <span class="city__geo"><svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M0 13C0 5.82729 5.82732 0 13 0C20.1727 0 26 5.82729 26 13C26 20.1727 20.1727 26 13 26C5.82732 26 0 20.1727 0 13ZM24.8182 13C24.8182 6.46599 19.534 1.18182 13 1.18182C6.46603 1.18182 1.18182 6.46599 1.18182 13C1.18182 19.534 6.46603 24.8182 13 24.8182C19.534 24.8182 24.8182 19.534 24.8182 13ZM17.6626 7.68182C17.6218 7.68684 17.5815 7.69613 17.5426 7.70952L6.90625 11.255C6.67154 11.333 6.51024 11.5489 6.502 11.7961C6.49376 12.0433 6.64033 12.2695 6.86932 12.3629L11.6612 14.3388L13.6371 19.1307C13.7305 19.3597 13.9567 19.5062 14.2039 19.498C14.4511 19.4898 14.667 19.3285 14.745 19.0938L18.2905 8.45739C18.355 8.26567 18.317 8.05428 18.1897 7.89706C18.0624 7.73983 17.8636 7.65863 17.6626 7.68182ZM14.1172 17.2102L16.7855 9.19602L8.78054 11.8736L12.3352 13.3324C12.4819 13.3924 12.5984 13.5088 12.6584 13.6555L14.1172 17.2102Z" />
+                    </svg>
+                </span>
+                <p class="city__name">
+                    Нижний Новгород
+                </p>
+                <span class="city__arrow">
+                    <svg width="10" height="7" viewBox="0 0 10 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1.5 1.5L5.5 5.5" stroke-linecap="square" />
+                        <path d="M9.5 1.5L5.5 5.5" stroke-linecap="square" />
+                    </svg>
+                </span>
+            </a>
+            <a href="javascript:void(0);" class="burger burger--desktop">
+                <span class="burger__button burger__button--catalog"></span>
+            </a>
+        </header>
+    </div>
+    <main>
+        <div class="page-wrapper">
+            <section class="home-v2">
+                <picture class="picture picture--home-v2">
+                    <source srcset="assets/images/content-images/home-v2-d.webp" type="image/webp" class="image"
+                        media="(min-width: 1280px)">
+                    <source srcset="assets/images/content-images/home-v2-d.jpg" type="image/jpg" class="image"
+                        media="(min-width: 1280px)">
+                    <source srcset="assets/images/content-images/home-v2-t.webp" type="image/webp" class="image"
+                        media="(min-width: 768px)">
+                    <source srcset="assets/images/content-images/home-v2-t.jpg" type="image/jpg" class="image"
+                        media="(min-width: 768px)">
+                    <source srcset="assets/images/content-images/home-v2-m.webp" type="image/webp" class="image">
+                    <source srcset="assets/images/content-images/home-v2-m.jpg" type="image/jpg" class="image">
+                    <img src="assets/images/content-images/home-v2-d.jpg" alt="" class="image">
+                </picture>
+                <ul class="breadcrumb">
+                    <li class="breadcrumb__item">
+                        <a href="index.html" class="breadcrumb__link">
+                            Главная
+                        </a>
+                    </li>
+                    <li class="breadcrumb__item breadcrumb__item--active">
+                        Межкомнатные двери
+                    </li>
+                </ul>
+                <h2 class="home-v2__title cropped--row2">
+                    Межкомнатные двери
+                </h2>
+                <div class="button-order">
+                    <a href="javascript: void(0);" title="" class="button-order__link">
+                        <svg width="24" height="36" viewBox="0 0 24 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="1.68506" y="1" width="9.5375" height="33.6" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" />
+                            <circle cx="6.454" cy="5.65664" r="1.6625" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M11.2225 10.5712H8.56836" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M11.2225 13.5839H9.44336" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M11.2225 16.5961H8.56836" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M11.2225 19.6088H9.44336" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M11.2225 22.621H8.56836" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M11.2225 25.6337H9.44336" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M11.2225 28.6464H8.56836" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M11.2225 31.6586H9.44336" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" />
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M19.3841 34.5999L22.715 29.0518H16.0532L19.3841 34.5999Z" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" />
+                            <rect x="16.0532" y="6.42529" width="6.66177" height="22.6265" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" />
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M20.9065 1H17.8617C16.8629 1 16.0532 1.80967 16.0532 2.80844V6.42534H22.715V2.80844C22.715 1.80967 21.9053 1 20.9065 1Z" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                        <span class="button-order__text">
+                            Заказать замер
+                        </span>
+                        <svg width="44" height="9" viewBox="0 0 44 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0.5 4H0V5H0.5V4ZM43.8536 4.85355C44.0488 4.65829 44.0488 4.34171 43.8536 4.14645L40.6716 0.964466C40.4763 0.769204 40.1597 0.769204 39.9645 0.964466C39.7692 1.15973 39.7692 1.47631 39.9645 1.67157L42.7929 4.5L39.9645 7.32843C39.7692 7.52369 39.7692 7.84027 39.9645 8.03553C40.1597 8.2308 40.4763 8.2308 40.6716 8.03553L43.8536 4.85355ZM0.5 5H43.5V4H0.5V5Z" />
+                        </svg>
+                    </a>
+                </div>
+            </section>
+            <section class="sidebar">
+                <div class="sidebar__nav">
+                    <div class="sidebar__logo">
+                        <a href="index.html" title="" class="logo-link logo-link--sidebar">
+                            <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M4.95183 34.8548H34.8548V4.95183H4.95183V34.8548ZM9.91351 25.3541H27.2549L29.8934 30.3064H9.91351V25.3541ZM25.8374 17.4932H9.91351V22.4451H25.8384L25.8374 17.4932ZM9.91351 9.50021H29.8934L27.2041 14.4528H9.91351V9.50021ZM0 39.8064H39.8067V0H0V39.8064Z" />
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="sidebar__info">
+                        <a href="javascript: void(0);" title="" class="phone phone--sidebar">
+                            <svg width="25" height="25" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M0 7.19963C0.39546 4.92709 2.17757 2.52564 3.94431 0.760741V0.760598C5.28274 -0.184378 6.64098 -0.325833 8.02256 0.775859L12.0413 4.776C12.9721 5.74015 12.9914 7.45131 12.3985 8.7761C11.9874 9.36339 11.5516 9.95546 11.1168 10.5462C10.8572 10.8989 10.5979 11.2511 10.3445 11.6015C10.1683 12.2797 10.4882 12.9834 10.9994 13.6387C11.6571 14.5241 12.6485 15.5057 13.5608 16.409C13.7276 16.5741 13.8917 16.7365 14.0506 16.8953C15.0616 17.9054 16.3199 19.1314 17.4145 19.9141C17.4479 19.9378 17.4829 19.9629 17.5193 19.989C17.9912 20.3278 18.7029 20.8388 19.3345 20.6127L22.0434 18.6201C23.3492 17.9666 24.965 17.9188 26.211 18.9472L30.2446 22.9771C31.2115 23.9771 31.2913 25.9268 30.2446 26.9773C28.6577 28.4715 26.0413 30.7026 23.9189 30.9328C21.514 31.2977 18.995 30.1373 16.4619 28.4048C13.9288 26.6724 11.3616 24.2908 8.99004 21.9213C4.20131 17.137 0.0595963 11.9633 0 7.19963ZM10.6869 6.12894L6.68304 2.11387L6.68307 2.11382C6.15367 1.85709 5.78119 1.7464 5.25421 2.14339C3.4491 4.05933 2.20327 5.81269 1.92015 7.25882C2.02244 10.8437 5.71072 15.9531 10.3446 20.5827C12.6778 22.9138 15.1756 25.2155 17.5337 26.8283C19.8849 28.4364 22.065 29.2881 23.6213 29.0588C25.038 28.7803 26.3503 27.6907 27.6184 26.6377C28.0567 26.2738 28.4898 25.9142 28.92 25.594C29.1259 25.1226 29.1817 24.7744 28.8902 24.3152L24.8715 20.3002C24.2667 19.9873 23.7244 19.9763 23.0556 20.2407C22.8246 20.4104 22.5935 20.58 22.3624 20.7497C21.7298 21.2141 21.0972 21.6785 20.4657 22.1444C19.1996 22.9827 17.5018 22.3274 16.2982 21.4752C15.0812 20.605 13.883 19.4061 12.9031 18.4255C12.8381 18.3604 12.7741 18.2964 12.7111 18.2334C12.5097 18.0322 12.295 17.8226 12.0729 17.6058C11.2025 16.7561 10.2176 15.7948 9.46637 14.7835C8.56207 13.5553 7.92535 12.0338 8.81147 10.4711L10.7166 7.86876C10.9067 7.25839 11.0444 6.70325 10.6869 6.12894Z" />
+                            </svg>
+                        </a>
+                        <div class="search-input--sidebar">
+                            <div class="search-input--sidebar__form-wrapper">
+                                <form class="search-input--sidebar__form">
+                                    <input type="search" class="search-input--sidebar__input" placeholder="Поиск">
+                                </form>
+                                <a href="javascript:void(0);" title="" class="search search--sidebar">
+                                    <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M8.65768 17.2973C3.89596 17.2973 0 13.4054 0 8.64864C0 3.89189 3.89596 0 8.65768 0C13.4194 0 17.3154 3.89189 17.3154 8.64864C17.3154 10.8082 16.5124 12.7895 15.1899 14.3093L20.6052 19.719C20.865 19.9784 20.865 20.3676 20.6052 20.627C20.5186 20.7567 20.3454 20.8 20.1723 20.8C19.9992 20.8 19.826 20.7567 19.6962 20.627L14.2777 15.2142C12.7625 16.5113 10.7975 17.2973 8.65768 17.2973ZM8.65768 1.2973C4.58858 1.2973 1.29866 4.58378 1.29866 8.64864C1.29866 12.7135 4.58858 16 8.65768 16C12.7268 16 16.0167 12.7135 16.0167 8.64864C16.0167 4.58378 12.7268 1.2973 8.65768 1.2973Z" />
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                        <a href="tel:88005513240" title="" class="sidebar__tel">
+                            8 800 551 32 40
+                        </a>
+                    </div>
+                </div>
+                <h2 class="title title--sidebar">
+                    21 коллекция
+                </h2>
+                <div class="sidebar__filter">
+                    <a href="javascript:void(0);" title="" class="sidebar__filter-link sidebar__filter-link--active">
+                        Коллекции
+                    </a>
+                    <a href="javascript:void(0);" title="" class="sidebar__filter-link">
+                        Все двери
+                    </a>
+                    <a href="javascript:void(0);" title="" class="sidebar__filter-settings">
+                        <img class="image" src="assets/images/svg/settings.svg" alt="">
+                    </a>
+                </div>
+                <ul class="sidebar__list">
+                    <li class="sidebar__list-item">
+                        <a href="javascript:void(0);" title="" class="sidebar__submenu sidebar__submenu--style">
+                            Стиль
+                            <svg width="11" height="7" viewBox="0 0 11 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9.5 5.5L5.5 1.5" stroke="#1E8A47" stroke-linecap="square" />
+                                <path d="M1.5 5.5L5.5 1.5" stroke="#1E8A47" stroke-linecap="square" />
+                            </svg>
+                        </a>
+                        <ul class="sidebar__sec-list">
+                            <li class="sidebar__list-point">
+                                <a href="javascript:void(0);" title="" class="sidebar__product-link">
+                                    Современный
+                                </a>
+                            </li>
+                            <li class="sidebar__list-point">
+                                <a href="javascript:void(0);" title="" class="sidebar__product-link">
+                                    Классический
+                                </a>
+                            </li>
+                            <li class="sidebar__list-point">
+                                <a href="javascript:void(0);" title="" class="sidebar__product-link">
+                                    Неоклассический
+                                </a>
+                            </li>
+                            <li class="sidebar__list-point">
+                                <a href="javascript:void(0);" title="" class="sidebar__product-link">
+                                    Дизайнерский
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="sidebar__list-item">
+                        <a href="javascript:void(0);" title="" class="sidebar__submenu sidebar__submenu--finish">
+                            Отделка
+                            <svg width="11" height="7" viewBox="0 0 11 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9.5 5.5L5.5 1.5" stroke="#1E8A47" stroke-linecap="square" />
+                                <path d="M1.5 5.5L5.5 1.5" stroke="#1E8A47" stroke-linecap="square" />
+                            </svg>
+                        </a>
+                        <ul class="sidebar__finish">
+                            <li class="sidebar__list-point">
+                                <a href="javascript:void(0);" title="" class="sidebar__product-link">
+                                    Эмаль
+                                </a>
+                            </li>
+                            <li class="sidebar__list-point">
+                                <a href="javascript:void(0);" title="" class="sidebar__product-link">
+                                    Покрытие
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="sidebar__list-item">
+                        <a href="javascript:void(0);" title="" class="sidebar__submenu sidebar__submenu--cost">
+                            Цена
+                            <svg width="11" height="7" viewBox="0 0 11 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9.5 5.5L5.5 1.5" stroke="#1E8A47" stroke-linecap="square" />
+                                <path d="M1.5 5.5L5.5 1.5" stroke="#1E8A47" stroke-linecap="square" />
+                            </svg>
+                        </a>
+                        <form class="sidebar__form">
+                            <div class="cost-container">
+                                <span class="min-cost">
+                                    7500 р
+                                </span>
+                                <span class="max-cost">
+                                    2000 р
+                                </span>
+                            </div>
+                            <div class="noUiSlider"></div>
+                            <label for="reset">
+                                <input type="reset" id="reset" value="reset">
+                                Сбросить все
+                            </label>
+                            <label for="sale">
+                                <input class="input-checkbox" type="checkbox" name="sale" id="sale">
+                                Только по акции
+                            </label>
+                        </form>
+                    </li>
+                </ul>
+            </section>
+            <section class="products-v2">
+                <div class="products-v2__wrap">
+                    <div class="card-product card-product--type-1">
+                        <a href="javascript: void(0);" title="" class="card-product__link card-product__link--right">
+                            <div class="card-product__wrap">
+                                <picture class="product__wrapper product__wrapper--height-small">
+                                    <source srcset="assets/images/content-images/products1-t.webp" type="image/webp"
+                                        class="image" media="(min-width: 768px)">
+                                    <source srcset="assets/images/content-images/products1-t.jpg" type="image/jpg"
+                                        class="image" media="(min-width: 768px)">
+                                    <source srcset="assets/images/content-images/products1-m.webp" type="image/webp"
+                                        class="image">
+                                    <source srcset="assets/images/content-images/products1-m.jpg" type="image/jpg"
+                                        class="image">
+                                    <img src="assets/images/content-images/products1-m.jpg" class="image image--transform" alt="">
+                                </picture>
+                                <div class="card-product__title card-product__title--right">
+                                    <p class="card-product__name cropped">
+                                        Sonata
+                                    </p>
+                                    <p class="card-product__price">
+                                        от 7 500 ₽
+                                    </p>
+                                </div>
+                                <span class="card-product__circle-link card-product__circle-link--right">
+                                    <svg width="12" height="20" viewBox="0 0 12 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M2.33357 1.29297L2.68713 0.939416L2.33357 0.585862L1.98002 0.939415L2.33357 1.29297ZM2.68713 1.64652L2.33357 2.00008L2.33357 2.00008L2.68713 1.64652ZM1.62646 2.00008L1.27291 1.64652L0.919358 2.00008L1.27291 2.35363L1.62646 2.00008ZM1.98002 2.35363L2.33357 2.00008L2.33357 2.00008L1.98002 2.35363ZM9.62647 10.0001L9.98002 10.3536L10.3336 10.0001L9.98002 9.64652L9.62647 10.0001ZM1.98002 17.6465L2.33357 18.0001H2.33357L1.98002 17.6465ZM1.62646 18.0001L1.27291 17.6465L0.919358 18.0001L1.27291 18.3536L1.62646 18.0001ZM2.33357 18.7072L1.98002 19.0607L2.33357 19.4143L2.68713 19.0607L2.33357 18.7072ZM2.68713 18.3536L2.33357 18.0001H2.33357L2.68713 18.3536ZM10.3336 10.7072L10.6871 11.0607L10.6871 11.0607L10.3336 10.7072ZM10.6871 10.3536L10.3336 10.0001L10.3336 10.0001L10.6871 10.3536ZM11.0407 10.0001L11.3942 10.3536L11.7478 10.0001L11.3942 9.64652L11.0407 10.0001ZM10.6871 9.64652L10.3336 10.0001V10.0001L10.6871 9.64652ZM10.3336 9.29297L10.6871 8.93941L10.6871 8.93941L10.3336 9.29297ZM1.98002 1.64652L2.33357 2.00008L3.04068 1.29297L2.68713 0.939416L1.98002 1.64652ZM1.98002 2.35363L2.68713 1.64652L1.98002 0.939415L1.27291 1.64652L1.98002 2.35363ZM2.33357 2.00008L1.98002 1.64652L1.27291 2.35363L1.62647 2.70718L2.33357 2.00008ZM9.98002 9.64652L2.33357 2.00008L1.62647 2.70718L9.27291 10.3536L9.98002 9.64652ZM9.27291 9.64652L1.62646 17.293L2.33357 18.0001L9.98002 10.3536L9.27291 9.64652ZM1.62647 17.293L1.27291 17.6465L1.98002 18.3536L2.33357 18.0001L1.62647 17.293ZM1.27291 18.3536L1.98002 19.0607L2.68713 18.3536L1.98002 17.6465L1.27291 18.3536ZM2.68713 19.0607L3.04068 18.7072L2.33357 18.0001L1.98002 18.3536L2.68713 19.0607ZM3.04068 18.7072L10.6871 11.0607L9.98002 10.3536L2.33357 18.0001L3.04068 18.7072ZM10.3336 10.0001L9.98002 10.3536L10.6871 11.0607L11.0407 10.7072L10.3336 10.0001ZM10.6871 9.64652L10.3336 10.0001L11.0407 10.7072L11.3942 10.3536L10.6871 9.64652ZM10.3336 10.0001L10.6871 10.3536L11.3942 9.64652L11.0407 9.29297L10.3336 10.0001ZM9.98002 9.64652L10.3336 10.0001L11.0407 9.29297L10.6871 8.93941L9.98002 9.64652ZM2.33357 2.00008L9.98002 9.64652L10.6871 8.93941L3.04068 1.29297L2.33357 2.00008Z" />
+                                    </svg>
+                                </span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card-product card-product--type-2">
+                        <a href="javascript: void(0);" title="" class="card-product__link card-product__link--left">
+                            <div class="card-product__wrap">
+                                <picture class="product__wrapper product__wrapper--height-small">
+                                    <source srcset="assets/images/content-images/products2-t.webp" type="image/webp"
+                                        class="image" media="(min-width: 768px)">
+                                    <source srcset="assets/images/content-images/products2-t.jpg" type="image/jpg"
+                                        class="image" media="(min-width: 768px)">
+                                    <source srcset="assets/images/content-images/products2-m.webp" type="image/webp"
+                                        class="image">
+                                    <source srcset="assets/images/content-images/products2-m.jpg" type="image/jpg"
+                                        class="image">
+                                    <img src="assets/images/content-images/products2-m.jpg" class="image image--transform" alt="">
+                                </picture>
+                                <div class="card-product__title card-product__title--left">
+                                    <p class="card-product__name cropped">
+                                        RENAISSANCE
+                                    </p>
+                                    <p class="card-product__price">
+                                        от 7 500 ₽
+                                    </p>
+                                </div>
+                                <span class="card-product__circle-link card-product__circle-link--left">
+                                    <svg width="12" height="20" viewBox="0 0 12 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M2.33357 1.29297L2.68713 0.939416L2.33357 0.585862L1.98002 0.939415L2.33357 1.29297ZM2.68713 1.64652L2.33357 2.00008L2.33357 2.00008L2.68713 1.64652ZM1.62646 2.00008L1.27291 1.64652L0.919358 2.00008L1.27291 2.35363L1.62646 2.00008ZM1.98002 2.35363L2.33357 2.00008L2.33357 2.00008L1.98002 2.35363ZM9.62647 10.0001L9.98002 10.3536L10.3336 10.0001L9.98002 9.64652L9.62647 10.0001ZM1.98002 17.6465L2.33357 18.0001H2.33357L1.98002 17.6465ZM1.62646 18.0001L1.27291 17.6465L0.919358 18.0001L1.27291 18.3536L1.62646 18.0001ZM2.33357 18.7072L1.98002 19.0607L2.33357 19.4143L2.68713 19.0607L2.33357 18.7072ZM2.68713 18.3536L2.33357 18.0001H2.33357L2.68713 18.3536ZM10.3336 10.7072L10.6871 11.0607L10.6871 11.0607L10.3336 10.7072ZM10.6871 10.3536L10.3336 10.0001L10.3336 10.0001L10.6871 10.3536ZM11.0407 10.0001L11.3942 10.3536L11.7478 10.0001L11.3942 9.64652L11.0407 10.0001ZM10.6871 9.64652L10.3336 10.0001V10.0001L10.6871 9.64652ZM10.3336 9.29297L10.6871 8.93941L10.6871 8.93941L10.3336 9.29297ZM1.98002 1.64652L2.33357 2.00008L3.04068 1.29297L2.68713 0.939416L1.98002 1.64652ZM1.98002 2.35363L2.68713 1.64652L1.98002 0.939415L1.27291 1.64652L1.98002 2.35363ZM2.33357 2.00008L1.98002 1.64652L1.27291 2.35363L1.62647 2.70718L2.33357 2.00008ZM9.98002 9.64652L2.33357 2.00008L1.62647 2.70718L9.27291 10.3536L9.98002 9.64652ZM9.27291 9.64652L1.62646 17.293L2.33357 18.0001L9.98002 10.3536L9.27291 9.64652ZM1.62647 17.293L1.27291 17.6465L1.98002 18.3536L2.33357 18.0001L1.62647 17.293ZM1.27291 18.3536L1.98002 19.0607L2.68713 18.3536L1.98002 17.6465L1.27291 18.3536ZM2.68713 19.0607L3.04068 18.7072L2.33357 18.0001L1.98002 18.3536L2.68713 19.0607ZM3.04068 18.7072L10.6871 11.0607L9.98002 10.3536L2.33357 18.0001L3.04068 18.7072ZM10.3336 10.0001L9.98002 10.3536L10.6871 11.0607L11.0407 10.7072L10.3336 10.0001ZM10.6871 9.64652L10.3336 10.0001L11.0407 10.7072L11.3942 10.3536L10.6871 9.64652ZM10.3336 10.0001L10.6871 10.3536L11.3942 9.64652L11.0407 9.29297L10.3336 10.0001ZM9.98002 9.64652L10.3336 10.0001L11.0407 9.29297L10.6871 8.93941L9.98002 9.64652ZM2.33357 2.00008L9.98002 9.64652L10.6871 8.93941L3.04068 1.29297L2.33357 2.00008Z" />
+                                    </svg>
+                                </span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card-product card-product--type-3">
+                        <a href="javascript: void(0);" title="" class="card-product__link card-product__link--right">
+                            <div class="card-product__wrap">
+                                <picture class="product__wrapper product__wrapper--height-small">
+                                    <source srcset="assets/images/content-images/products1-t.webp" type="image/webp"
+                                        class="image" media="(min-width: 768px)">
+                                    <source srcset="assets/images/content-images/products1-t.jpg" type="image/jpg"
+                                        class="image" media="(min-width: 768px)">
+                                    <source srcset="assets/images/content-images/products1-m.webp" type="image/webp"
+                                        class="image">
+                                    <source srcset="assets/images/content-images/products1-m.jpg" type="image/jpg"
+                                        class="image">
+                                    <img src="assets/images/content-images/products1-m.jpg" class="image image--transform" alt="">
+                                </picture>
+                                <div class="card-product__title card-product__title--right">
+                                    <p class="card-product__name cropped">
+                                        Sonata</p>
+                                    <p class="card-product__price">
+                                        от 7 500 ₽
+                                    </p>
+                                </div>
+                                <span class="card-product__circle-link card-product__circle-link--right">
+                                    <svg width="12" height="20" viewBox="0 0 12 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M2.33357 1.29297L2.68713 0.939416L2.33357 0.585862L1.98002 0.939415L2.33357 1.29297ZM2.68713 1.64652L2.33357 2.00008L2.33357 2.00008L2.68713 1.64652ZM1.62646 2.00008L1.27291 1.64652L0.919358 2.00008L1.27291 2.35363L1.62646 2.00008ZM1.98002 2.35363L2.33357 2.00008L2.33357 2.00008L1.98002 2.35363ZM9.62647 10.0001L9.98002 10.3536L10.3336 10.0001L9.98002 9.64652L9.62647 10.0001ZM1.98002 17.6465L2.33357 18.0001H2.33357L1.98002 17.6465ZM1.62646 18.0001L1.27291 17.6465L0.919358 18.0001L1.27291 18.3536L1.62646 18.0001ZM2.33357 18.7072L1.98002 19.0607L2.33357 19.4143L2.68713 19.0607L2.33357 18.7072ZM2.68713 18.3536L2.33357 18.0001H2.33357L2.68713 18.3536ZM10.3336 10.7072L10.6871 11.0607L10.6871 11.0607L10.3336 10.7072ZM10.6871 10.3536L10.3336 10.0001L10.3336 10.0001L10.6871 10.3536ZM11.0407 10.0001L11.3942 10.3536L11.7478 10.0001L11.3942 9.64652L11.0407 10.0001ZM10.6871 9.64652L10.3336 10.0001V10.0001L10.6871 9.64652ZM10.3336 9.29297L10.6871 8.93941L10.6871 8.93941L10.3336 9.29297ZM1.98002 1.64652L2.33357 2.00008L3.04068 1.29297L2.68713 0.939416L1.98002 1.64652ZM1.98002 2.35363L2.68713 1.64652L1.98002 0.939415L1.27291 1.64652L1.98002 2.35363ZM2.33357 2.00008L1.98002 1.64652L1.27291 2.35363L1.62647 2.70718L2.33357 2.00008ZM9.98002 9.64652L2.33357 2.00008L1.62647 2.70718L9.27291 10.3536L9.98002 9.64652ZM9.27291 9.64652L1.62646 17.293L2.33357 18.0001L9.98002 10.3536L9.27291 9.64652ZM1.62647 17.293L1.27291 17.6465L1.98002 18.3536L2.33357 18.0001L1.62647 17.293ZM1.27291 18.3536L1.98002 19.0607L2.68713 18.3536L1.98002 17.6465L1.27291 18.3536ZM2.68713 19.0607L3.04068 18.7072L2.33357 18.0001L1.98002 18.3536L2.68713 19.0607ZM3.04068 18.7072L10.6871 11.0607L9.98002 10.3536L2.33357 18.0001L3.04068 18.7072ZM10.3336 10.0001L9.98002 10.3536L10.6871 11.0607L11.0407 10.7072L10.3336 10.0001ZM10.6871 9.64652L10.3336 10.0001L11.0407 10.7072L11.3942 10.3536L10.6871 9.64652ZM10.3336 10.0001L10.6871 10.3536L11.3942 9.64652L11.0407 9.29297L10.3336 10.0001ZM9.98002 9.64652L10.3336 10.0001L11.0407 9.29297L10.6871 8.93941L9.98002 9.64652ZM2.33357 2.00008L9.98002 9.64652L10.6871 8.93941L3.04068 1.29297L2.33357 2.00008Z" />
+                                    </svg>
+                                </span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card-product card-product--type-4">
+                        <a href="javascript: void(0);" title="" class="card-product__link card-product__link--left">
+                            <div class="card-product__wrap">
+                                <picture class="product__wrapper product__wrapper--height-small">
+                                    <source srcset="assets/images/content-images/products2-t.webp" type="image/webp"
+                                        class="image" media="(min-width: 768px)">
+                                    <source srcset="assets/images/content-images/products2-t.jpg" type="image/jpg"
+                                        class="image" media="(min-width: 768px)">
+                                    <source srcset="assets/images/content-images/products2-m.webp" type="image/webp"
+                                        class="image">
+                                    <source srcset="assets/images/content-images/products2-m.jpg" type="image/jpg"
+                                        class="image">
+                                    <img src="assets/images/content-images/products2-m.jpg" class="image image--transform" alt="">
+                                </picture>
+                                <div
+                                    class="card-product__title card-product__title--left">
+                                    <p class="card-product__name cropped">
+                                        RENAISSANCE
+                                    </p>
+                                    <p class="card-product__price">
+                                        от 7 500 ₽
+                                    </p>
+                                </div>
+                                <span class="card-product__circle-link card-product__circle-link--left">
+                                    <svg width="12" height="20" viewBox="0 0 12 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M2.33357 1.29297L2.68713 0.939416L2.33357 0.585862L1.98002 0.939415L2.33357 1.29297ZM2.68713 1.64652L2.33357 2.00008L2.33357 2.00008L2.68713 1.64652ZM1.62646 2.00008L1.27291 1.64652L0.919358 2.00008L1.27291 2.35363L1.62646 2.00008ZM1.98002 2.35363L2.33357 2.00008L2.33357 2.00008L1.98002 2.35363ZM9.62647 10.0001L9.98002 10.3536L10.3336 10.0001L9.98002 9.64652L9.62647 10.0001ZM1.98002 17.6465L2.33357 18.0001H2.33357L1.98002 17.6465ZM1.62646 18.0001L1.27291 17.6465L0.919358 18.0001L1.27291 18.3536L1.62646 18.0001ZM2.33357 18.7072L1.98002 19.0607L2.33357 19.4143L2.68713 19.0607L2.33357 18.7072ZM2.68713 18.3536L2.33357 18.0001H2.33357L2.68713 18.3536ZM10.3336 10.7072L10.6871 11.0607L10.6871 11.0607L10.3336 10.7072ZM10.6871 10.3536L10.3336 10.0001L10.3336 10.0001L10.6871 10.3536ZM11.0407 10.0001L11.3942 10.3536L11.7478 10.0001L11.3942 9.64652L11.0407 10.0001ZM10.6871 9.64652L10.3336 10.0001V10.0001L10.6871 9.64652ZM10.3336 9.29297L10.6871 8.93941L10.6871 8.93941L10.3336 9.29297ZM1.98002 1.64652L2.33357 2.00008L3.04068 1.29297L2.68713 0.939416L1.98002 1.64652ZM1.98002 2.35363L2.68713 1.64652L1.98002 0.939415L1.27291 1.64652L1.98002 2.35363ZM2.33357 2.00008L1.98002 1.64652L1.27291 2.35363L1.62647 2.70718L2.33357 2.00008ZM9.98002 9.64652L2.33357 2.00008L1.62647 2.70718L9.27291 10.3536L9.98002 9.64652ZM9.27291 9.64652L1.62646 17.293L2.33357 18.0001L9.98002 10.3536L9.27291 9.64652ZM1.62647 17.293L1.27291 17.6465L1.98002 18.3536L2.33357 18.0001L1.62647 17.293ZM1.27291 18.3536L1.98002 19.0607L2.68713 18.3536L1.98002 17.6465L1.27291 18.3536ZM2.68713 19.0607L3.04068 18.7072L2.33357 18.0001L1.98002 18.3536L2.68713 19.0607ZM3.04068 18.7072L10.6871 11.0607L9.98002 10.3536L2.33357 18.0001L3.04068 18.7072ZM10.3336 10.0001L9.98002 10.3536L10.6871 11.0607L11.0407 10.7072L10.3336 10.0001ZM10.6871 9.64652L10.3336 10.0001L11.0407 10.7072L11.3942 10.3536L10.6871 9.64652ZM10.3336 10.0001L10.6871 10.3536L11.3942 9.64652L11.0407 9.29297L10.3336 10.0001ZM9.98002 9.64652L10.3336 10.0001L11.0407 9.29297L10.6871 8.93941L9.98002 9.64652ZM2.33357 2.00008L9.98002 9.64652L10.6871 8.93941L3.04068 1.29297L2.33357 2.00008Z" />
+                                    </svg>
+                                </span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card-product card-product--type-5">
+                        <p class="card-product__description card-product__description--first cropped--row10">
+                            В компании ESTET вы можете купить качественные межкомнатные двери. Богатый выбор является гарантией того, что вы обязательно найдете модель, оптимально соответствующую вашим потребностям, пожеланиям и финансовым возможностям.
+                        </p>
+                    </div>
+                    <div class="card-product card-product--type-6">
+                        <a href="javascript: void(0);" title="" class="card-product__link card-product__link--right">
+                            <div class="card-product__wrap">
+                                <picture class="product__wrapper product__wrapper--height-small">
+                                    <source srcset="assets/images/content-images/products1-t.webp" type="image/webp"
+                                        class="image" media="(min-width: 768px)">
+                                    <source srcset="assets/images/content-images/products1-t.jpg" type="image/jpg"
+                                        class="image" media="(min-width: 768px)">
+                                    <source srcset="assets/images/content-images/products1-m.webp" type="image/webp"
+                                        class="image">
+                                    <source srcset="assets/images/content-images/products1-m.jpg" type="image/jpg"
+                                        class="image">
+                                    <img src="assets/images/content-images/products1-m.jpg" class="image image--transform" alt="">
+                                </picture>
+                                <div class="card-product__title card-product__title--right-top">
+                                    <p class="card-product__name cropped">
+                                        Sonata
+                                    </p>
+                                    <p class="card-product__price">
+                                        от 7 500 ₽
+                                    </p>
+                                </div>
+                                <span class="card-product__circle-link card-product__circle-link--right-bottom">
+                                    <svg width="12" height="20" viewBox="0 0 12 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M2.33357 1.29297L2.68713 0.939416L2.33357 0.585862L1.98002 0.939415L2.33357 1.29297ZM2.68713 1.64652L2.33357 2.00008L2.33357 2.00008L2.68713 1.64652ZM1.62646 2.00008L1.27291 1.64652L0.919358 2.00008L1.27291 2.35363L1.62646 2.00008ZM1.98002 2.35363L2.33357 2.00008L2.33357 2.00008L1.98002 2.35363ZM9.62647 10.0001L9.98002 10.3536L10.3336 10.0001L9.98002 9.64652L9.62647 10.0001ZM1.98002 17.6465L2.33357 18.0001H2.33357L1.98002 17.6465ZM1.62646 18.0001L1.27291 17.6465L0.919358 18.0001L1.27291 18.3536L1.62646 18.0001ZM2.33357 18.7072L1.98002 19.0607L2.33357 19.4143L2.68713 19.0607L2.33357 18.7072ZM2.68713 18.3536L2.33357 18.0001H2.33357L2.68713 18.3536ZM10.3336 10.7072L10.6871 11.0607L10.6871 11.0607L10.3336 10.7072ZM10.6871 10.3536L10.3336 10.0001L10.3336 10.0001L10.6871 10.3536ZM11.0407 10.0001L11.3942 10.3536L11.7478 10.0001L11.3942 9.64652L11.0407 10.0001ZM10.6871 9.64652L10.3336 10.0001V10.0001L10.6871 9.64652ZM10.3336 9.29297L10.6871 8.93941L10.6871 8.93941L10.3336 9.29297ZM1.98002 1.64652L2.33357 2.00008L3.04068 1.29297L2.68713 0.939416L1.98002 1.64652ZM1.98002 2.35363L2.68713 1.64652L1.98002 0.939415L1.27291 1.64652L1.98002 2.35363ZM2.33357 2.00008L1.98002 1.64652L1.27291 2.35363L1.62647 2.70718L2.33357 2.00008ZM9.98002 9.64652L2.33357 2.00008L1.62647 2.70718L9.27291 10.3536L9.98002 9.64652ZM9.27291 9.64652L1.62646 17.293L2.33357 18.0001L9.98002 10.3536L9.27291 9.64652ZM1.62647 17.293L1.27291 17.6465L1.98002 18.3536L2.33357 18.0001L1.62647 17.293ZM1.27291 18.3536L1.98002 19.0607L2.68713 18.3536L1.98002 17.6465L1.27291 18.3536ZM2.68713 19.0607L3.04068 18.7072L2.33357 18.0001L1.98002 18.3536L2.68713 19.0607ZM3.04068 18.7072L10.6871 11.0607L9.98002 10.3536L2.33357 18.0001L3.04068 18.7072ZM10.3336 10.0001L9.98002 10.3536L10.6871 11.0607L11.0407 10.7072L10.3336 10.0001ZM10.6871 9.64652L10.3336 10.0001L11.0407 10.7072L11.3942 10.3536L10.6871 9.64652ZM10.3336 10.0001L10.6871 10.3536L11.3942 9.64652L11.0407 9.29297L10.3336 10.0001ZM9.98002 9.64652L10.3336 10.0001L11.0407 9.29297L10.6871 8.93941L9.98002 9.64652ZM2.33357 2.00008L9.98002 9.64652L10.6871 8.93941L3.04068 1.29297L2.33357 2.00008Z" />
+                                    </svg>
+                                </span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card-product card-product--type-7">
+                        <a href="javascript: void(0);" title="" class="card-product__link">
+                            <div class="card-product__wrap">
+                                <picture class="product__wrapper product__wrapper--height-450">
+                                    <source srcset="assets/images/content-images/products3-t.webp" type="image/webp"
+                                        class="image" media="(min-width: 768px)">
+                                    <source srcset="assets/images/content-images/products3-t.jpg" type="image/jpg"
+                                        class="image" media="(min-width: 768px)">
+                                    <source srcset="assets/images/content-images/products3-m.webp" type="image/webp"
+                                        class="image">
+                                    <source srcset="assets/images/content-images/products3-m.jpg" type="image/jpg"
+                                        class="image">
+                                    <img src="assets/images/content-images/products3-m.jpg" class="image image--transform" alt="">
+                                </picture>
+                                <p class="card-product__name card-product__name--renaissance cropped">
+                                    RENAISSANCE COLLECTION
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card-product card-product--type-8">
+                        <a href="javascript: void(0);" title="" class="card-product__link card-product__link--left">
+                            <div class="card-product__wrap">
+                                <picture class="product__wrapper product__wrapper--height-small">
+                                    <source srcset="assets/images/content-images/products2-t.webp" type="image/webp"
+                                        class="image" media="(min-width: 768px)">
+                                    <source srcset="assets/images/content-images/products2-t.jpg" type="image/jpg"
+                                        class="image" media="(min-width: 768px)">
+                                    <source srcset="assets/images/content-images/products2-m.webp" type="image/webp"
+                                        class="image">
+                                    <source srcset="assets/images/content-images/products2-m.jpg" type="image/jpg"
+                                        class="image">
+                                    <img src="assets/images/content-images/products2-m.jpg" class="image image--transform" alt="">
+                                </picture>
+                                <div class="card-product__title card-product__title--left-top">
+                                    <p class="card-product__name cropped">
+                                        RENAISSANCE
+                                    </p>
+                                    <p class="card-product__price">
+                                        от 7 500 ₽
+                                    </p>
+                                </div>
+                                <span class="card-product__circle-link card-product__circle-link--left-bottom">
+                                    <svg width="12" height="20" viewBox="0 0 12 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M2.33357 1.29297L2.68713 0.939416L2.33357 0.585862L1.98002 0.939415L2.33357 1.29297ZM2.68713 1.64652L2.33357 2.00008L2.33357 2.00008L2.68713 1.64652ZM1.62646 2.00008L1.27291 1.64652L0.919358 2.00008L1.27291 2.35363L1.62646 2.00008ZM1.98002 2.35363L2.33357 2.00008L2.33357 2.00008L1.98002 2.35363ZM9.62647 10.0001L9.98002 10.3536L10.3336 10.0001L9.98002 9.64652L9.62647 10.0001ZM1.98002 17.6465L2.33357 18.0001H2.33357L1.98002 17.6465ZM1.62646 18.0001L1.27291 17.6465L0.919358 18.0001L1.27291 18.3536L1.62646 18.0001ZM2.33357 18.7072L1.98002 19.0607L2.33357 19.4143L2.68713 19.0607L2.33357 18.7072ZM2.68713 18.3536L2.33357 18.0001H2.33357L2.68713 18.3536ZM10.3336 10.7072L10.6871 11.0607L10.6871 11.0607L10.3336 10.7072ZM10.6871 10.3536L10.3336 10.0001L10.3336 10.0001L10.6871 10.3536ZM11.0407 10.0001L11.3942 10.3536L11.7478 10.0001L11.3942 9.64652L11.0407 10.0001ZM10.6871 9.64652L10.3336 10.0001V10.0001L10.6871 9.64652ZM10.3336 9.29297L10.6871 8.93941L10.6871 8.93941L10.3336 9.29297ZM1.98002 1.64652L2.33357 2.00008L3.04068 1.29297L2.68713 0.939416L1.98002 1.64652ZM1.98002 2.35363L2.68713 1.64652L1.98002 0.939415L1.27291 1.64652L1.98002 2.35363ZM2.33357 2.00008L1.98002 1.64652L1.27291 2.35363L1.62647 2.70718L2.33357 2.00008ZM9.98002 9.64652L2.33357 2.00008L1.62647 2.70718L9.27291 10.3536L9.98002 9.64652ZM9.27291 9.64652L1.62646 17.293L2.33357 18.0001L9.98002 10.3536L9.27291 9.64652ZM1.62647 17.293L1.27291 17.6465L1.98002 18.3536L2.33357 18.0001L1.62647 17.293ZM1.27291 18.3536L1.98002 19.0607L2.68713 18.3536L1.98002 17.6465L1.27291 18.3536ZM2.68713 19.0607L3.04068 18.7072L2.33357 18.0001L1.98002 18.3536L2.68713 19.0607ZM3.04068 18.7072L10.6871 11.0607L9.98002 10.3536L2.33357 18.0001L3.04068 18.7072ZM10.3336 10.0001L9.98002 10.3536L10.6871 11.0607L11.0407 10.7072L10.3336 10.0001ZM10.6871 9.64652L10.3336 10.0001L11.0407 10.7072L11.3942 10.3536L10.6871 9.64652ZM10.3336 10.0001L10.6871 10.3536L11.3942 9.64652L11.0407 9.29297L10.3336 10.0001ZM9.98002 9.64652L10.3336 10.0001L11.0407 9.29297L10.6871 8.93941L9.98002 9.64652ZM2.33357 2.00008L9.98002 9.64652L10.6871 8.93941L3.04068 1.29297L2.33357 2.00008Z" />
+                                    </svg>
+                                </span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card-product card-product--type-9">
+                        <p class="card-product__description card-product__description--second-1">
+                            25
+                        </p>
+                        <p class="card-product__description card-product__description--second-2">
+                            коллекций и более 300 опций
+                        </p>
+                    </div>
+                    <div class="card-product card-product--type-10">
+                        <a href="javascript:void(0);" title="" class="card-product__link card-product__link--right">
+                            <div class="card-product__wrap">
+                                <picture class="product__wrapper product__wrapper--height-small">
+                                    <source srcset="assets/images/content-images/products1-t.webp" type="image/webp"
+                                        class="image" media="(min-width: 768px)">
+                                    <source srcset="assets/images/content-images/products1-t.jpg" type="image/jpg"
+                                        class="image" media="(min-width: 768px)">
+                                    <source srcset="assets/images/content-images/products1-m.webp" type="image/webp"
+                                        class="image">
+                                    <source srcset="assets/images/content-images/products1-m.jpg" type="image/jpg"
+                                        class="image">
+                                    <img src="assets/images/content-images/products1-m.jpg" class="image image--transform" alt="">
+                                </picture>
+                                <div class="card-product__title card-product__title--right">
+                                    <p class="card-product__name cropped">
+                                        Sonata</p>
+                                    <p class="card-product__price">
+                                        от 7 500 ₽
+                                    </p>
+                                </div>
+                                <span class="card-product__circle-link card-product__circle-link--right">
+                                    <svg width="12" height="20" viewBox="0 0 12 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M2.33357 1.29297L2.68713 0.939416L2.33357 0.585862L1.98002 0.939415L2.33357 1.29297ZM2.68713 1.64652L2.33357 2.00008L2.33357 2.00008L2.68713 1.64652ZM1.62646 2.00008L1.27291 1.64652L0.919358 2.00008L1.27291 2.35363L1.62646 2.00008ZM1.98002 2.35363L2.33357 2.00008L2.33357 2.00008L1.98002 2.35363ZM9.62647 10.0001L9.98002 10.3536L10.3336 10.0001L9.98002 9.64652L9.62647 10.0001ZM1.98002 17.6465L2.33357 18.0001H2.33357L1.98002 17.6465ZM1.62646 18.0001L1.27291 17.6465L0.919358 18.0001L1.27291 18.3536L1.62646 18.0001ZM2.33357 18.7072L1.98002 19.0607L2.33357 19.4143L2.68713 19.0607L2.33357 18.7072ZM2.68713 18.3536L2.33357 18.0001H2.33357L2.68713 18.3536ZM10.3336 10.7072L10.6871 11.0607L10.6871 11.0607L10.3336 10.7072ZM10.6871 10.3536L10.3336 10.0001L10.3336 10.0001L10.6871 10.3536ZM11.0407 10.0001L11.3942 10.3536L11.7478 10.0001L11.3942 9.64652L11.0407 10.0001ZM10.6871 9.64652L10.3336 10.0001V10.0001L10.6871 9.64652ZM10.3336 9.29297L10.6871 8.93941L10.6871 8.93941L10.3336 9.29297ZM1.98002 1.64652L2.33357 2.00008L3.04068 1.29297L2.68713 0.939416L1.98002 1.64652ZM1.98002 2.35363L2.68713 1.64652L1.98002 0.939415L1.27291 1.64652L1.98002 2.35363ZM2.33357 2.00008L1.98002 1.64652L1.27291 2.35363L1.62647 2.70718L2.33357 2.00008ZM9.98002 9.64652L2.33357 2.00008L1.62647 2.70718L9.27291 10.3536L9.98002 9.64652ZM9.27291 9.64652L1.62646 17.293L2.33357 18.0001L9.98002 10.3536L9.27291 9.64652ZM1.62647 17.293L1.27291 17.6465L1.98002 18.3536L2.33357 18.0001L1.62647 17.293ZM1.27291 18.3536L1.98002 19.0607L2.68713 18.3536L1.98002 17.6465L1.27291 18.3536ZM2.68713 19.0607L3.04068 18.7072L2.33357 18.0001L1.98002 18.3536L2.68713 19.0607ZM3.04068 18.7072L10.6871 11.0607L9.98002 10.3536L2.33357 18.0001L3.04068 18.7072ZM10.3336 10.0001L9.98002 10.3536L10.6871 11.0607L11.0407 10.7072L10.3336 10.0001ZM10.6871 9.64652L10.3336 10.0001L11.0407 10.7072L11.3942 10.3536L10.6871 9.64652ZM10.3336 10.0001L10.6871 10.3536L11.3942 9.64652L11.0407 9.29297L10.3336 10.0001ZM9.98002 9.64652L10.3336 10.0001L11.0407 9.29297L10.6871 8.93941L9.98002 9.64652ZM2.33357 2.00008L9.98002 9.64652L10.6871 8.93941L3.04068 1.29297L2.33357 2.00008Z" />
+                                    </svg>
+                                </span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card-product card-product--type-11">
+                        <a href="javascript: void(0);" title="" class="card-product__link card-product__link--left">
+                            <div class="card-product__wrap">
+                                <picture class="product__wrapper product__wrapper--height-small">
+                                    <source srcset="assets/images/content-images/products2-t.webp" type="image/webp"
+                                        class="image" media="(min-width: 768px)">
+                                    <source srcset="assets/images/content-images/products2-t.jpg" type="image/jpg"
+                                        class="image" media="(min-width: 768px)">
+                                    <source srcset="assets/images/content-images/products2-m.webp" type="image/webp"
+                                        class="image">
+                                    <source srcset="assets/images/content-images/products2-m.jpg" type="image/jpg"
+                                        class="image">
+                                    <img src="assets/images/content-images/products2-m.jpg" class="image image--transform" alt="">
+                                </picture>
+                                <div class="card-product__title card-product__title--left">
+                                    <p class="card-product__name cropped">
+                                        RENAISSANCE</p>
+                                    <p class="card-product__price">
+                                        от 7 500 ₽
+                                    </p>
+                                </div>
+                                <span class="card-product__circle-link card-product__circle-link--left">
+                                    <svg width="12" height="20" viewBox="0 0 12 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M2.33357 1.29297L2.68713 0.939416L2.33357 0.585862L1.98002 0.939415L2.33357 1.29297ZM2.68713 1.64652L2.33357 2.00008L2.33357 2.00008L2.68713 1.64652ZM1.62646 2.00008L1.27291 1.64652L0.919358 2.00008L1.27291 2.35363L1.62646 2.00008ZM1.98002 2.35363L2.33357 2.00008L2.33357 2.00008L1.98002 2.35363ZM9.62647 10.0001L9.98002 10.3536L10.3336 10.0001L9.98002 9.64652L9.62647 10.0001ZM1.98002 17.6465L2.33357 18.0001H2.33357L1.98002 17.6465ZM1.62646 18.0001L1.27291 17.6465L0.919358 18.0001L1.27291 18.3536L1.62646 18.0001ZM2.33357 18.7072L1.98002 19.0607L2.33357 19.4143L2.68713 19.0607L2.33357 18.7072ZM2.68713 18.3536L2.33357 18.0001H2.33357L2.68713 18.3536ZM10.3336 10.7072L10.6871 11.0607L10.6871 11.0607L10.3336 10.7072ZM10.6871 10.3536L10.3336 10.0001L10.3336 10.0001L10.6871 10.3536ZM11.0407 10.0001L11.3942 10.3536L11.7478 10.0001L11.3942 9.64652L11.0407 10.0001ZM10.6871 9.64652L10.3336 10.0001V10.0001L10.6871 9.64652ZM10.3336 9.29297L10.6871 8.93941L10.6871 8.93941L10.3336 9.29297ZM1.98002 1.64652L2.33357 2.00008L3.04068 1.29297L2.68713 0.939416L1.98002 1.64652ZM1.98002 2.35363L2.68713 1.64652L1.98002 0.939415L1.27291 1.64652L1.98002 2.35363ZM2.33357 2.00008L1.98002 1.64652L1.27291 2.35363L1.62647 2.70718L2.33357 2.00008ZM9.98002 9.64652L2.33357 2.00008L1.62647 2.70718L9.27291 10.3536L9.98002 9.64652ZM9.27291 9.64652L1.62646 17.293L2.33357 18.0001L9.98002 10.3536L9.27291 9.64652ZM1.62647 17.293L1.27291 17.6465L1.98002 18.3536L2.33357 18.0001L1.62647 17.293ZM1.27291 18.3536L1.98002 19.0607L2.68713 18.3536L1.98002 17.6465L1.27291 18.3536ZM2.68713 19.0607L3.04068 18.7072L2.33357 18.0001L1.98002 18.3536L2.68713 19.0607ZM3.04068 18.7072L10.6871 11.0607L9.98002 10.3536L2.33357 18.0001L3.04068 18.7072ZM10.3336 10.0001L9.98002 10.3536L10.6871 11.0607L11.0407 10.7072L10.3336 10.0001ZM10.6871 9.64652L10.3336 10.0001L11.0407 10.7072L11.3942 10.3536L10.6871 9.64652ZM10.3336 10.0001L10.6871 10.3536L11.3942 9.64652L11.0407 9.29297L10.3336 10.0001ZM9.98002 9.64652L10.3336 10.0001L11.0407 9.29297L10.6871 8.93941L9.98002 9.64652ZM2.33357 2.00008L9.98002 9.64652L10.6871 8.93941L3.04068 1.29297L2.33357 2.00008Z" />
+                                    </svg>
+                                </span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card-product card-product--type-12">
+                        <a href="javascript:void(0);" title="" class="card-product__link card-product__link--right">
+                            <div class="card-product__wrap">
+                                <picture class="product__wrapper product__wrapper--height-small">
+                                    <source srcset="assets/images/content-images/products1-t.webp" type="image/webp"
+                                        class="image" media="(min-width: 768px)">
+                                    <source srcset="assets/images/content-images/products1-t.jpg" type="image/jpg"
+                                        class="image" media="(min-width: 768px)">
+                                    <source srcset="assets/images/content-images/products1-m.webp" type="image/webp"
+                                        class="image">
+                                    <source srcset="assets/images/content-images/products1-m.jpg" type="image/jpg"
+                                        class="image">
+                                    <img src="assets/images/content-images/products1-m.jpg" class="image image--transform" alt="">
+                                </picture>
+                                <div class="card-product__title card-product__title--right">
+                                    <p class="card-product__name cropped">
+                                        Sonata
+                                    </p>
+                                    <p class="card-product__price">
+                                        от 7 500 ₽
+                                    </p>
+                                </div>
+                                <span class="card-product__circle-link card-product__circle-link--right-bottom">
+                                    <svg width="12" height="20" viewBox="0 0 12 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M2.33357 1.29297L2.68713 0.939416L2.33357 0.585862L1.98002 0.939415L2.33357 1.29297ZM2.68713 1.64652L2.33357 2.00008L2.33357 2.00008L2.68713 1.64652ZM1.62646 2.00008L1.27291 1.64652L0.919358 2.00008L1.27291 2.35363L1.62646 2.00008ZM1.98002 2.35363L2.33357 2.00008L2.33357 2.00008L1.98002 2.35363ZM9.62647 10.0001L9.98002 10.3536L10.3336 10.0001L9.98002 9.64652L9.62647 10.0001ZM1.98002 17.6465L2.33357 18.0001H2.33357L1.98002 17.6465ZM1.62646 18.0001L1.27291 17.6465L0.919358 18.0001L1.27291 18.3536L1.62646 18.0001ZM2.33357 18.7072L1.98002 19.0607L2.33357 19.4143L2.68713 19.0607L2.33357 18.7072ZM2.68713 18.3536L2.33357 18.0001H2.33357L2.68713 18.3536ZM10.3336 10.7072L10.6871 11.0607L10.6871 11.0607L10.3336 10.7072ZM10.6871 10.3536L10.3336 10.0001L10.3336 10.0001L10.6871 10.3536ZM11.0407 10.0001L11.3942 10.3536L11.7478 10.0001L11.3942 9.64652L11.0407 10.0001ZM10.6871 9.64652L10.3336 10.0001V10.0001L10.6871 9.64652ZM10.3336 9.29297L10.6871 8.93941L10.6871 8.93941L10.3336 9.29297ZM1.98002 1.64652L2.33357 2.00008L3.04068 1.29297L2.68713 0.939416L1.98002 1.64652ZM1.98002 2.35363L2.68713 1.64652L1.98002 0.939415L1.27291 1.64652L1.98002 2.35363ZM2.33357 2.00008L1.98002 1.64652L1.27291 2.35363L1.62647 2.70718L2.33357 2.00008ZM9.98002 9.64652L2.33357 2.00008L1.62647 2.70718L9.27291 10.3536L9.98002 9.64652ZM9.27291 9.64652L1.62646 17.293L2.33357 18.0001L9.98002 10.3536L9.27291 9.64652ZM1.62647 17.293L1.27291 17.6465L1.98002 18.3536L2.33357 18.0001L1.62647 17.293ZM1.27291 18.3536L1.98002 19.0607L2.68713 18.3536L1.98002 17.6465L1.27291 18.3536ZM2.68713 19.0607L3.04068 18.7072L2.33357 18.0001L1.98002 18.3536L2.68713 19.0607ZM3.04068 18.7072L10.6871 11.0607L9.98002 10.3536L2.33357 18.0001L3.04068 18.7072ZM10.3336 10.0001L9.98002 10.3536L10.6871 11.0607L11.0407 10.7072L10.3336 10.0001ZM10.6871 9.64652L10.3336 10.0001L11.0407 10.7072L11.3942 10.3536L10.6871 9.64652ZM10.3336 10.0001L10.6871 10.3536L11.3942 9.64652L11.0407 9.29297L10.3336 10.0001ZM9.98002 9.64652L10.3336 10.0001L11.0407 9.29297L10.6871 8.93941L9.98002 9.64652ZM2.33357 2.00008L9.98002 9.64652L10.6871 8.93941L3.04068 1.29297L2.33357 2.00008Z" />
+                                    </svg>
+                                </span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card-product card-product--type-13">
+                        <p class="card-product__description card-product__description--third cropped cropped--row7">
+                            Современные материалы и инновационные покрытия
+                        </p>
+                    </div>
+                    <div class="card-product card-product--type-14">
+                        <picture class="product__wrapper product__wrapper--height-big">
+                            <source srcset="assets/images/content-images/products4-d.webp" type="image/webp"
+                                class="image" media="(min-width: 1280px)">
+                            <source srcset="assets/images/content-images/products4-d.jpg" type="image/jpg"
+                                class="image" media="(min-width: 1280px)">
+                            <source srcset="assets/images/content-images/products4-t.webp" type="image/webp"
+                                class="image" media="(min-width: 768px)">
+                            <source srcset="assets/images/content-images/products4-t.jpg" type="image/jpg"
+                                class="image" media="(min-width: 768px)">
+                            <source srcset="assets/images/content-images/products4-m.webp" type="image/webp"
+                                class="image">
+                            <source srcset="assets/images/content-images/products4-m.jpg" type="image/jpg"
+                                class="image">
+                            <img src="assets/images/content-images/products4-d.jpg" class="image image--transform" alt="">
+                        </picture>
+                        <div class="card-product__wrap-description">
+                            <p class="card-product__description card-product__description--second-3">
+                                5
+                            </p>
+                            <p class="card-product__description card-product__description--second-4 cropped cropped--row7">
+                                лет гарантии на любую продукцию ESTET
+                            </p>
+                        </div>
+                    </div>
+                    <div class="card-product__shell">
+                        <div class="card-product card-product--type-22">
+                            <a href="javascript: void(0);" title="" class="card-product__link card-product__link--left">
+                                <div class="card-product__wrap">
+                                    <picture class="product__wrapper product__wrapper--height-small">
+                                        <source srcset="assets/images/content-images/products2-t.webp" type="image/webp"
+                                            class="image" media="(min-width: 768px)">
+                                        <source srcset="assets/images/content-images/products2-t.jpg" type="image/jpg"
+                                            class="image" media="(min-width: 768px)">
+                                        <source srcset="assets/images/content-images/products2-m.webp" type="image/webp"
+                                            class="image">
+                                        <source srcset="assets/images/content-images/products2-m.jpg" type="image/jpg"
+                                            class="image">
+                                        <img src="assets/images/content-images/products2-m.jpg" class="image image--transform" alt="">
+                                    </picture>
+                                    <div class="card-product__title card-product__title--left">
+                                        <p class="card-product__name cropped">
+                                            RENAISSANCE</p>
+                                        <p class="card-product__price">
+                                            от 7 500 ₽
+                                        </p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="card-product card-product--type-23">
+                            <a href="javascript: void(0);" title="" class="card-product__link card-product__link--right">
+                                <div class="card-product__wrap">
+                                    <picture class="product__wrapper product__wrapper--height-small">
+                                        <source srcset="assets/images/content-images/products5-t.webp" type="image/webp"
+                                            class="image">
+                                        <source srcset="assets/images/content-images/products5-t.jpg" type="image/jpg"
+                                            class="image">
+                                        <img src="assets/images/content-images/products5-t.jpg" class="image image--transform" alt="">
+                                    </picture>
+                                    <div class="card-product__title card-product__title--right">
+                                        <p class="card-product__name cropped">
+                                            Genesis
+                                        </p>
+                                        <p class="card-product__price">
+                                            от 14 500 ₽
+                                        </p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="card-product card-product--type-15">
+                        <a href="javascript: void(0);" title="" class="card-product__link card-product__link--left">
+                            <div class="card-product__wrap">
+                                <picture class="product__wrapper product__wrapper--height-small">
+                                    <source srcset="assets/images/content-images/products2-t.webp" type="image/webp"
+                                        class="image" media="(min-width: 768px)">
+                                    <source srcset="assets/images/content-images/products2-t.jpg" type="image/jpg"
+                                        class="image" media="(min-width: 768px)">
+                                    <source srcset="assets/images/content-images/products2-m.webp" type="image/webp"
+                                        class="image">
+                                    <source srcset="assets/images/content-images/products2-m.jpg" type="image/jpg"
+                                        class="image">
+                                    <img src="assets/images/content-images/products2-m.jpg" class="image image--transform" alt="">
+                                </picture>
+                                <div class="card-product__title card-product__title--left-top">
+                                    <p class="card-product__name cropped">
+                                        RENAISSANCE
+                                    </p>
+                                    <p class="card-product__price">
+                                        от 7 500 ₽
+                                    </p>
+                                </div>
+                                <span class="card-product__circle-link card-product__circle-link--left-bottom">
+                                    <svg width="12" height="20" viewBox="0 0 12 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M2.33357 1.29297L2.68713 0.939416L2.33357 0.585862L1.98002 0.939415L2.33357 1.29297ZM2.68713 1.64652L2.33357 2.00008L2.33357 2.00008L2.68713 1.64652ZM1.62646 2.00008L1.27291 1.64652L0.919358 2.00008L1.27291 2.35363L1.62646 2.00008ZM1.98002 2.35363L2.33357 2.00008L2.33357 2.00008L1.98002 2.35363ZM9.62647 10.0001L9.98002 10.3536L10.3336 10.0001L9.98002 9.64652L9.62647 10.0001ZM1.98002 17.6465L2.33357 18.0001H2.33357L1.98002 17.6465ZM1.62646 18.0001L1.27291 17.6465L0.919358 18.0001L1.27291 18.3536L1.62646 18.0001ZM2.33357 18.7072L1.98002 19.0607L2.33357 19.4143L2.68713 19.0607L2.33357 18.7072ZM2.68713 18.3536L2.33357 18.0001H2.33357L2.68713 18.3536ZM10.3336 10.7072L10.6871 11.0607L10.6871 11.0607L10.3336 10.7072ZM10.6871 10.3536L10.3336 10.0001L10.3336 10.0001L10.6871 10.3536ZM11.0407 10.0001L11.3942 10.3536L11.7478 10.0001L11.3942 9.64652L11.0407 10.0001ZM10.6871 9.64652L10.3336 10.0001V10.0001L10.6871 9.64652ZM10.3336 9.29297L10.6871 8.93941L10.6871 8.93941L10.3336 9.29297ZM1.98002 1.64652L2.33357 2.00008L3.04068 1.29297L2.68713 0.939416L1.98002 1.64652ZM1.98002 2.35363L2.68713 1.64652L1.98002 0.939415L1.27291 1.64652L1.98002 2.35363ZM2.33357 2.00008L1.98002 1.64652L1.27291 2.35363L1.62647 2.70718L2.33357 2.00008ZM9.98002 9.64652L2.33357 2.00008L1.62647 2.70718L9.27291 10.3536L9.98002 9.64652ZM9.27291 9.64652L1.62646 17.293L2.33357 18.0001L9.98002 10.3536L9.27291 9.64652ZM1.62647 17.293L1.27291 17.6465L1.98002 18.3536L2.33357 18.0001L1.62647 17.293ZM1.27291 18.3536L1.98002 19.0607L2.68713 18.3536L1.98002 17.6465L1.27291 18.3536ZM2.68713 19.0607L3.04068 18.7072L2.33357 18.0001L1.98002 18.3536L2.68713 19.0607ZM3.04068 18.7072L10.6871 11.0607L9.98002 10.3536L2.33357 18.0001L3.04068 18.7072ZM10.3336 10.0001L9.98002 10.3536L10.6871 11.0607L11.0407 10.7072L10.3336 10.0001ZM10.6871 9.64652L10.3336 10.0001L11.0407 10.7072L11.3942 10.3536L10.6871 9.64652ZM10.3336 10.0001L10.6871 10.3536L11.3942 9.64652L11.0407 9.29297L10.3336 10.0001ZM9.98002 9.64652L10.3336 10.0001L11.0407 9.29297L10.6871 8.93941L9.98002 9.64652ZM2.33357 2.00008L9.98002 9.64652L10.6871 8.93941L3.04068 1.29297L2.33357 2.00008Z" />
+                                    </svg>
+                                </span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card-product card-product--type-16">
+                        <a href="javascript: void(0);" title="" class="card-product__link card-product__link--right">
+                            <div class="card-product__wrap">
+                                <picture class="product__wrapper product__wrapper--height-small">
+                                    <source srcset="assets/images/content-images/products1-t.webp" type="image/webp"
+                                        class="image" media="(min-width: 768px)">
+                                    <source srcset="assets/images/content-images/products1-t.jpg" type="image/jpg"
+                                        class="image" media="(min-width: 768px)">
+                                    <source srcset="assets/images/content-images/products1-m.webp" type="image/webp"
+                                        class="image">
+                                    <source srcset="assets/images/content-images/products1-m.jpg" type="image/jpg"
+                                        class="image">
+                                    <img src="assets/images/content-images/products1-m.jpg" class="image image--transform" alt="">
+                                </picture>
+                                <div class="card-product__title card-product__title--right-top">
+                                    <p class="card-product__name cropped">
+                                        Sonata
+                                    </p>
+                                    <p class="card-product__price">
+                                        от 7 500 ₽
+                                    </p>
+                                </div>
+                                <span class="card-product__circle-link card-product__circle-link--right-bottom">
+                                    <svg width="12" height="20" viewBox="0 0 12 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M2.33357 1.29297L2.68713 0.939416L2.33357 0.585862L1.98002 0.939415L2.33357 1.29297ZM2.68713 1.64652L2.33357 2.00008L2.33357 2.00008L2.68713 1.64652ZM1.62646 2.00008L1.27291 1.64652L0.919358 2.00008L1.27291 2.35363L1.62646 2.00008ZM1.98002 2.35363L2.33357 2.00008L2.33357 2.00008L1.98002 2.35363ZM9.62647 10.0001L9.98002 10.3536L10.3336 10.0001L9.98002 9.64652L9.62647 10.0001ZM1.98002 17.6465L2.33357 18.0001H2.33357L1.98002 17.6465ZM1.62646 18.0001L1.27291 17.6465L0.919358 18.0001L1.27291 18.3536L1.62646 18.0001ZM2.33357 18.7072L1.98002 19.0607L2.33357 19.4143L2.68713 19.0607L2.33357 18.7072ZM2.68713 18.3536L2.33357 18.0001H2.33357L2.68713 18.3536ZM10.3336 10.7072L10.6871 11.0607L10.6871 11.0607L10.3336 10.7072ZM10.6871 10.3536L10.3336 10.0001L10.3336 10.0001L10.6871 10.3536ZM11.0407 10.0001L11.3942 10.3536L11.7478 10.0001L11.3942 9.64652L11.0407 10.0001ZM10.6871 9.64652L10.3336 10.0001V10.0001L10.6871 9.64652ZM10.3336 9.29297L10.6871 8.93941L10.6871 8.93941L10.3336 9.29297ZM1.98002 1.64652L2.33357 2.00008L3.04068 1.29297L2.68713 0.939416L1.98002 1.64652ZM1.98002 2.35363L2.68713 1.64652L1.98002 0.939415L1.27291 1.64652L1.98002 2.35363ZM2.33357 2.00008L1.98002 1.64652L1.27291 2.35363L1.62647 2.70718L2.33357 2.00008ZM9.98002 9.64652L2.33357 2.00008L1.62647 2.70718L9.27291 10.3536L9.98002 9.64652ZM9.27291 9.64652L1.62646 17.293L2.33357 18.0001L9.98002 10.3536L9.27291 9.64652ZM1.62647 17.293L1.27291 17.6465L1.98002 18.3536L2.33357 18.0001L1.62647 17.293ZM1.27291 18.3536L1.98002 19.0607L2.68713 18.3536L1.98002 17.6465L1.27291 18.3536ZM2.68713 19.0607L3.04068 18.7072L2.33357 18.0001L1.98002 18.3536L2.68713 19.0607ZM3.04068 18.7072L10.6871 11.0607L9.98002 10.3536L2.33357 18.0001L3.04068 18.7072ZM10.3336 10.0001L9.98002 10.3536L10.6871 11.0607L11.0407 10.7072L10.3336 10.0001ZM10.6871 9.64652L10.3336 10.0001L11.0407 10.7072L11.3942 10.3536L10.6871 9.64652ZM10.3336 10.0001L10.6871 10.3536L11.3942 9.64652L11.0407 9.29297L10.3336 10.0001ZM9.98002 9.64652L10.3336 10.0001L11.0407 9.29297L10.6871 8.93941L9.98002 9.64652ZM2.33357 2.00008L9.98002 9.64652L10.6871 8.93941L3.04068 1.29297L2.33357 2.00008Z" />
+                                    </svg>
+                                </span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card-product card-product--type-17">
+                        <a href="javascript: void(0);" title="" class="card-product__link card-product__link--right">
+                            <div class="card-product__wrap">
+                                <picture class="product__wrapper product__wrapper--height-small">
+                                    <source srcset="assets/images/content-images/products5-t.webp" type="image/webp"
+                                        class="image">
+                                    <source srcset="assets/images/content-images/products5-t.jpg" type="image/jpg"
+                                        class="image">
+                                    <img src="assets/images/content-images/products5-t.jpg" class="image image--transform" alt="">
+                                </picture>
+                                <div class="card-product__title card-product__title--right-top">
+                                    <p class="card-product__name cropped">
+                                        Genesis
+                                    </p>
+                                    <p class="card-product__price">
+                                        от 14 500 ₽
+                                    </p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card-product card-product--type-18">
+                        <a href="javascript: void(0);" title="" class="card-product__link card-product__link--right">
+                            <div class="card-product__wrap">
+                                <picture class="product__wrapper product__wrapper--height-small">
+                                    <source srcset="assets/images/content-images/products5-t.webp" type="image/webp"
+                                        class="image">
+                                    <source srcset="assets/images/content-images/products5-t.jpg" type="image/jpg"
+                                        class="image">
+                                    <img src="assets/images/content-images/products5-t.jpg" class="image image--transform" alt="">
+                                </picture>
+                                <div class="card-product__title card-product__title--right">
+                                    <p class="card-product__name cropped">
+                                        Genesis
+                                    </p>
+                                    <p class="card-product__price">
+                                        от 14 500 ₽
+                                    </p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card-product card-product--type-19">
+                        <a href="javascript: void(0);" title="" class="card-product__link card-product__link--right">
+                            <div class="card-product__wrap">
+                                <picture class="product__wrapper product__wrapper--height-small">
+                                    <source srcset="assets/images/content-images/products5-t.webp" type="image/webp"
+                                        class="image">
+                                    <source srcset="assets/images/content-images/products5-t.jpg" type="image/jpg"
+                                        class="image">
+                                    <img src="assets/images/content-images/products5-t.jpg" class="image image--transform" alt="">
+                                </picture>
+                                <div class="card-product__title card-product__title--right-top">
+                                    <p class="card-product__name cropped">
+                                        Genesis
+                                    </p>
+                                    <p class="card-product__price">
+                                        от 14 500 ₽
+                                    </p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card-product card-product--type-20">
+                        <ul class="breadcrumdesktop">
+                            <li class="breadcrumdesktop__item">
+                                <a href="index.html" class="breadcrumdesktop__link">
+                                    Главная
+                                </a>
+                            </li>
+                            <li class="breadcrumdesktop__item breadcrumdesktop__item--active">
+                                Межкомнатные двери
+                            </li>
+                        </ul>
+                        <div class="button-order-desktop">
+                            <a href="javascript: void(0);" title="" class="button-order-desktop__link">
+                                <svg width="24" height="36" viewBox="0 0 24 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="1.68506" y="1" width="9.5375" height="33.6" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" />
+                                    <circle cx="6.454" cy="5.65664" r="1.6625" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" />
+                                    <path d="M11.2225 10.5712H8.56836" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" />
+                                    <path d="M11.2225 13.5839H9.44336" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" />
+                                    <path d="M11.2225 16.5961H8.56836" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" />
+                                    <path d="M11.2225 19.6088H9.44336" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" />
+                                    <path d="M11.2225 22.621H8.56836" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" />
+                                    <path d="M11.2225 25.6337H9.44336" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" />
+                                    <path d="M11.2225 28.6464H8.56836" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" />
+                                    <path d="M11.2225 31.6586H9.44336" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M19.3841 34.5999L22.715 29.0518H16.0532L19.3841 34.5999Z" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" />
+                                    <rect x="16.0532" y="6.42529" width="6.66177" height="22.6265" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M20.9065 1H17.8617C16.8629 1 16.0532 1.80967 16.0532 2.80844V6.42534H22.715V2.80844C22.715 1.80967 21.9053 1 20.9065 1Z" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                                <span class="button-order-desktop__text">
+                                    Заказать замер
+                                </span>
+                                <svg width="44" height="9" viewBox="0 0 44 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M0.5 4H0V5H0.5V4ZM43.8536 4.85355C44.0488 4.65829 44.0488 4.34171 43.8536 4.14645L40.6716 0.964466C40.4763 0.769204 40.1597 0.769204 39.9645 0.964466C39.7692 1.15973 39.7692 1.47631 39.9645 1.67157L42.7929 4.5L39.9645 7.32843C39.7692 7.52369 39.7692 7.84027 39.9645 8.03553C40.1597 8.2308 40.4763 8.2308 40.6716 8.03553L43.8536 4.85355ZM0.5 5H43.5V4H0.5V5Z" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="card-product card-product--type-21">
+                        <a href="javascript: void(0);" title="" class="card-product__link card-product__link--right">
+                            <div class="card-product__wrap">
+                                <picture class="product__wrapper product__wrapper--height-small">
+                                    <source srcset="assets/images/content-images/products5-t.webp" type="image/webp"
+                                        class="image">
+                                    <source srcset="assets/images/content-images/products5-t.jpg" type="image/jpg"
+                                        class="image">
+                                    <img src="assets/images/content-images/products5-t.jpg" class="image image--transform" alt="">
+                                </picture>
+                                <div class="card-product__title card-product__title--right">
+                                    <p class="card-product__name cropped">
+                                        Genesis
+                                    </p>
+                                    <p class="card-product__price">
+                                        от 14 500 ₽
+                                    </p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="pages">
+                    <p class="pages__count">
+                        <span class="pages__count--active">
+                            8
+                        </span>
+                        <span class="pages__count--passive">
+                            /14
+                        </span>
+                    </p>
+                    <a href="javascript: void(0);" title="" class="pages__more-link">
+                        <span class="pages__text">
+                            ПОКАЗАТЬ ЕЩЕ
+                        </span>
+                        <span class="pages__arrow">
+                            <svg width="100%" height="100%" viewBox="0 0 26 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M25.5 4.5L0.5 4.5L25.5 4.5Z" fill="white"/>
+                                <path d="M25.5 5H26V4H25.5V5ZM0.146446 4.14645C-0.0488148 4.34171 -0.0488148 4.65829 0.146446 4.85355L3.32843 8.03553C3.52369 8.2308 3.84027 8.2308 4.03553 8.03553C4.2308 7.84027 4.2308 7.52369 4.03553 7.32843L1.20711 4.5L4.03553 1.67157C4.2308 1.47631 4.2308 1.15973 4.03553 0.964466C3.84027 0.769204 3.52369 0.769204 3.32843 0.964466L0.146446 4.14645ZM25.5 4L0.5 4V5L25.5 5V4Z"/>
+                            </svg>
+                        </span>
+                    </a>
+                </div>
+            </section>
+        </div>
+        <section class="sale sale--v2">
+            <div class="sale__wrapper sale__wrapper--v2">
+                <a href="javascript:void(0);" title="" class="sale__link sale__link--v2">
+                    <h3 class="sale__title sale__title--main sale__title--v2 sale__title--v2-desk">
+                        <span class="sale__discount sale__discount--catalog">
+                            &mdash;20%
+                        </span>
+                        <span class="sale__discount-about">
+                            на коллекции MIO, ENGLAND, FIGURE
+                        </span>
+                    </h3>
+                    <picture class="sale__images">
+                        <source class="image" media="(min-width:768px)"
+                            srcset="assets/images/content-images/sale2x.webp" type="image/webp">
+                        <source class="image" media="(min-width:768px)"
+                            srcset="assets/images/content-images/sale2x.jpg" type="image/jpg">
+                        <source class="image" srcset="assets/images/content-images/sale.webp" type="image/webp">
+                        <source class="image" srcset="assets/images/content-images/sale.jpg" type="image/jpg">
+                        <img class="image image--transform" src="assets/images/content-images/sale.jpg" alt="">
+                    </picture>
+                </a>
+                <span class="sale__date sale__date--hidden">
+                    Акция действует до
+                    <time datetime="2021-02-15">
+                        15 февраля 2021г
+                    </time>
+                </span>
+                <div class="sale__buttons">
+                    <a href="javascript:void(0);" title="" class="button button--active button-fill--right">
+                        <svg width="26" height="9" viewBox="0 0 26 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M0.5 4.5H25.5H0.5Z" fill="white" />
+                            <path d="M0.5 4H0V5H0.5V4ZM25.8536 4.85355C26.0488 4.65829 26.0488 4.34171 25.8536 4.14645L22.6716 0.964466C22.4763 0.769204 22.1597 0.769204 21.9645 0.964466C21.7692 1.15973 21.7692 1.47631 21.9645 1.67157L24.7929 4.5L21.9645 7.32843C21.7692 7.52369 21.7692 7.84027 21.9645 8.03553C22.1597 8.2308 22.4763 8.2308 22.6716 8.03553L25.8536 4.85355ZM0.5 5H25.5V4H0.5V5Z" fill="white" />
+                        </svg>
+                    </a>
+                    <a href="javascript:void(0);" title="" class="button button--disabled button--sale">
+                        <svg width="26" height="9" viewBox="0 0 26 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M25.5 4.5L0.5 4.5L25.5 4.5Z" />
+                            <path d="M25.5 5H26V4H25.5V5ZM0.146446 4.14645C-0.0488148 4.34171 -0.0488148 4.65829 0.146446 4.85355L3.32843 8.03553C3.52369 8.2308 3.84027 8.2308 4.03553 8.03553C4.2308 7.84027 4.2308 7.52369 4.03553 7.32843L1.20711 4.5L4.03553 1.67157C4.2308 1.47631 4.2308 1.15973 4.03553 0.964466C3.84027 0.769204 3.52369 0.769204 3.32843 0.964466L0.146446 4.14645ZM25.5 4L0.5 4V5L25.5 5V4Z" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <div class="sale__content sale__content--v2">
+                <h3 class="sale__title sale__title--hidden cropped">
+                    -20% на коллекции MIO, ENGLAND, FIGURE
+                </h3>
+                <h3 class="sale__title sale__title--alternate-catalog sale__title--v2 cropped">
+                    Распродажа классических коллекций
+                </h3>
+                <p class="sale__description sale__description--v2 cropped">
+                    Успейте купить межкомнатные двери классической коллекции со скидкой 20% до середины февраля.
+                </p>
+                <span class="sale__date sale__date--content--hidden sale__date--catalog-desktop">
+                    Акция действует до
+                    <time datetime="2021-02-15">
+                        15 февраля 2021г
+                    </time>
+                </span>
+                <a href="javascript:void(0);" title="" class="sale__link-hidden">
+                    Подробнее
+                </a>
+            </div>
+            <div class="sale__preview">
+                <a href="javascript:void(0);" title="" class="sale__preview-link">
+                    <span class="sale__preview-play">
+                        <svg width="100%" height="100%" viewBox="0 0 74 76" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M43.8396 37.3982L32.7833 29.9006C32.5024 29.7102 32.1572 29.7102 31.8766 29.9006C31.5961 30.0905 31.4233 30.442 31.4233 30.8226V45.8193C31.4233 46.1996 31.5961 46.5514 31.8766 46.7414C32.0169 46.8378 32.1734 46.8846 32.3299 46.8846C32.4865 46.8846 32.643 46.8367 32.7833 46.7414L43.8396 39.2438C44.1208 39.0535 44.2929 38.702 44.2929 38.3213C44.2929 37.9407 44.1202 37.5888 43.8396 37.3982Z" />
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M0 38C0 58.9533 16.598 76 36.9991 76C57.4014 76 74 58.9533 74 38C74 17.0467 57.4014 0 36.9991 0C16.598 0 0 17.0467 0 38ZM1.07246 38C1.07246 17.6373 17.1891 1.07042 36.999 1.07042C56.8096 1.07042 72.9275 17.6367 72.9275 38C72.9275 58.362 56.8096 74.9296 36.999 74.9296C17.1891 74.9296 1.07246 58.3633 1.07246 38Z" />
+                        </svg>
+                    </span>
+                    <picture class="sale__images-prev">
+                        <source class="image" srcset="assets/images/content-images/sale-preview3x.webp"
+                            type="image/webp">
+                        <source class="image" srcset="assets/images/content-images/sale-preview3x.jpg"
+                            type="image/jpg">
+                        <img class="image" src="assets/images/content-images/sale-preview3x.jpg" alt="">
+                    </picture>
+                </a>
+                <div class="sale__footer-nav">
+                    <div class="pagination pagination--v2">
+                        <a href="javascript:void(0);" title="" class="pagination__point"></a>
+                        <a href="javascript:void(0);" title="" class="pagination__point"></a>
+                        <a href="javascript:void(0);" title="" class="pagination__point pagination__point--active"></a>
+                        <a href="javascript:void(0);" title="" class="pagination__point"></a>
+                        <a href="javascript:void(0);" title="" class="pagination__point pagination__point--hidden"></a>
+                        <a href="javascript:void(0);" title="" class="pagination__point pagination__point--hidden"></a>
+                        <a href="javascript:void(0);" title="" class="pagination__point pagination__point--hidden"></a>
+                        <a href="javascript:void(0);" title="" class="pagination__point pagination__point--hidden"></a>
+                    </div>
+                    <div class="sale__buttons sale__buttons--preview">
+                        <a href="javascript:void(0);" title="" class="button button--active">
+                            <svg width="26" height="9" viewBox="0 0 26 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M0.5 4.5H25.5H0.5Z" fill="white" />
+                                <path d="M0.5 4H0V5H0.5V4ZM25.8536 4.85355C26.0488 4.65829 26.0488 4.34171 25.8536 4.14645L22.6716 0.964466C22.4763 0.769204 22.1597 0.769204 21.9645 0.964466C21.7692 1.15973 21.7692 1.47631 21.9645 1.67157L24.7929 4.5L21.9645 7.32843C21.7692 7.52369 21.7692 7.84027 21.9645 8.03553C22.1597 8.2308 22.4763 8.2308 22.6716 8.03553L25.8536 4.85355ZM0.5 5H25.5V4H0.5V5Z" fill="white" />
+                            </svg>
+                        </a>
+                        <a href="javascript:void(0);" title="" class="button button--disabled button--sale">
+                            <svg width="26" height="9" viewBox="0 0 26 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M25.5 4.5L0.5 4.5L25.5 4.5Z" />
+                                <path d="M25.5 5H26V4H25.5V5ZM0.146446 4.14645C-0.0488148 4.34171 -0.0488148 4.65829 0.146446 4.85355L3.32843 8.03553C3.52369 8.2308 3.84027 8.2308 4.03553 8.03553C4.2308 7.84027 4.2308 7.52369 4.03553 7.32843L1.20711 4.5L4.03553 1.67157C4.2308 1.47631 4.2308 1.15973 4.03553 0.964466C3.84027 0.769204 3.52369 0.769204 3.32843 0.964466L0.146446 4.14645ZM25.5 4L0.5 4V5L25.5 5V4Z" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="page-wrapper">
+            <section class="tech">
+                <div class="tech__heading">
+                    <h2 class="tech__title">
+                        Современные технологии Lamell Tech<sup class="reg">&reg;</sup>
+                    </h2>
+                    <p class="tech__description">
+                        Инновационная технология изготовления бруса, применяемого в конструкции дверного полотна фабрикой ESTET. Брус изготавливается из отдельных реек, благодаря применению специальных смол, обеспечивается соединение реек на молекулярном уровне.
+                    </p>
+                </div>
+                <div class="news__wrapper news__wrapper--v2">
+                    <a href="javascript:void(0);" title="" class="news__all news__all--tech">
+                        Все технологии
+                    </a>
+                    <div class="news__arrows">
+                        <a href="javascript: void(0);" title="" class="arrow-prev arrow-prev--news">
+                            <svg width="61" height="9" viewBox="0 0 61 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M60.5 4H61V5H60.5V4ZM0.146446 4.85355C-0.0488167 4.65829 -0.0488167 4.34171 0.146446 4.14645L3.32843 0.964466C3.52369 0.769204 3.84027 0.769204 4.03553 0.964466C4.2308 1.15973 4.2308 1.47631 4.03553 1.67157L1.20711 4.5L4.03553 7.32843C4.2308 7.52369 4.2308 7.84027 4.03553 8.03553C3.84027 8.2308 3.52369 8.2308 3.32843 8.03553L0.146446 4.85355ZM60.5 5H0.5V4H60.5V5Z" />
+                            </svg>
+                        </a>
+                        <a href="javascript: void(0);" title="" class="arrow-next arrow-next--news">
+                            <svg width="61" height="9" viewBox="0 0 61 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0.5 4H0V5H0.5V4ZM60.8536 4.85355C61.0488 4.65829 61.0488 4.34171 60.8536 4.14645L57.6716 0.964466C57.4763 0.769204 57.1597 0.769204 56.9645 0.964466C56.7692 1.15973 56.7692 1.47631 56.9645 1.67157L59.7929 4.5L56.9645 7.32843C56.7692 7.52369 56.7692 7.84027 56.9645 8.03553C57.1597 8.2308 57.4763 8.2308 57.6716 8.03553L60.8536 4.85355ZM0.5 5H60.5V4H0.5V5Z" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="tech__sliders">
+                    <div class="tech__item">
+                        <a href="javascript:void(0);" title="" class="tech__link">
+                            <picture class="tech__images">
+                                <source class="image" srcset="assets/images/content-images/termofi.webp"
+                                    type="image/webp">
+                                <source class="image" srcset="assets/images/content-images/termofi.jpg"
+                                    type="image/jpg">
+                                <img class="image" src="assets/images/content-images/termofi.jpg" alt="">
+                            </picture>
+                            <h3 class="tech__item-title">
+                                Termofix
+                            </h3>
+                            <p class="tech__item-description">
+                                Технология обеспечивает высокие изолирующие свойства за счет жесткой фиксации минерального утеплителя в полотне.
+                            </p>
+                        </a>
+                    </div>
+                    <div class="tech__item">
+                        <a href="javascript:void(0);" title="" class="tech__link">
+                            <picture class="tech__images tech__images--middle">
+                                <source class="image" srcset="assets/images/content-images/iSecurity.webp"
+                                    type="image/webp">
+                                <source class="image" srcset="assets/images/content-images/iSecurity.jpg"
+                                    type="image/jpg">
+                                <img class="image" src="assets/images/content-images/iSecurity.jpg" alt="">
+                            </picture>
+                            <h3 class="tech__item-title">
+                                iSecurity
+                            </h3>
+                            <p class="tech__item-description">
+                                Комплексная система защиты дверного блока от взлома разрушающими и вандальными методами
+                            </p>
+                        </a>
+                    </div>
+                    <div class="tech__item">
+                        <a href="javascript:void(0);" title="" class="tech__link">
+                            <picture class="tech__images tech__images--large">
+                                <source class="image" srcset="assets/images/content-images/q-system.webp"
+                                    type="image/webp">
+                                <source class="image" srcset="assets/images/content-images/q-system.jpg"
+                                    type="image/jpg">
+                                <img class="image" src="assets/images/content-images/q-system.jpg" alt="">
+                            </picture>
+                            <h3 class="tech__item-title">
+                                Q-system
+                            </h3>
+                            <p class="tech__item-description">
+                                технология дополнительной звукоизоляции, способная обеспечить максимально необходимый уровень комфорта
+                            </p>
+                        </a>
+                    </div>
+                    <div class="tech__item">
+                        <a href="javascript:void(0);" title="" class="tech__link">
+                            <picture class="tech__images tech__images--middle">
+                                <source class="image" srcset="assets/images/content-images/profileSet.webp"
+                                    type="image/webp">
+                                <source class="image" srcset="assets/images/content-images/profileSet.jpg"
+                                    type="image/jpg">
+                                <img class="image" src="assets/images/content-images/profileSet.jpg" alt="">
+                            </picture>
+                            <h3 class="tech__item-title">
+                                ProfileSet
+                            </h3>
+                            <p class="tech__item-description">
+                                Технология обеспечивает высокую прочность конструкции.
+                            </p>
+                        </a>
+                    </div>
+                    <div class="tech__item">
+                        <a href="javascript:void(0);" title="" class="tech__link">
+                            <picture class="tech__images tech__images--large">
+                                <source class="image" srcset="assets/images/content-images/sqdr.webp"
+                                    type="image/webp">
+                                <source class="image" srcset="assets/images/content-images/sqdr.jpg" type="image/jpg">
+                                <img class="image" src="assets/images/content-images/sqdr.jpg" alt="">
+                            </picture>
+                            <h3 class="tech__item-title">
+                                SQDR
+                            </h3>
+                            <p class="tech__item-description">
+                                Технология обеспечивает высокие изолирующие свойства за счет жесткой фиксации минерального утеплителя в полотне.
+                            </p>
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <section class="shops shops--v2">
+            <div class="map">
+                <iframe class="iframe-map" src="https://yandex.ru/map-widget/v1/?um=constructor%3A609b6d1938976d00629ea8d0dc4f3fdabd34853faacd6a55fc6b77b822c82762&amp;source=constructor"></iframe>
+            </div>
+            <div class="button-map">
+                <a href="javascript: void(0);" title="" class="button-map__link">
+                    <svg width="23" height="30" viewBox="0 0 23 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M19.8 17.9311L19.0074 17.3214L19.0064 17.3227L19.8 17.9311ZM11.4889 28.772L12.1948 29.4803L12.242 29.4332L12.2825 29.3804L11.4889 28.772ZM11.3667 28.8938L11.9654 29.6947L12.0223 29.6522L12.0726 29.6021L11.3667 28.8938ZM10.5111 28.772L11.3102 28.1706L11.3047 28.1635L10.5111 28.772ZM2.2 17.9311L2.99361 17.3227L2.9926 17.3214L2.2 17.9311ZM10.1444 15.7386L10.3607 14.7622L10.3498 14.7599L10.1444 15.7386ZM6.78333 10.7445L5.80493 10.5379L6.78333 10.7445ZM11.7944 15.7386L11.6092 14.7559L11.5936 14.7589L11.5782 14.7623L11.7944 15.7386ZM15.1556 10.7445L14.1712 10.9209L14.1722 10.9263L15.1556 10.7445ZM11.7944 7.39486L12.0033 6.4169L11.9998 6.41617L11.7944 7.39486ZM11 0C4.43435 0 -1 5.16225 -1 11.5972H1C1 6.33869 5.46565 2 11 2V0ZM23 11.5972C23 5.16225 17.5657 0 11 0V2C16.5343 2 21 6.33869 21 11.5972H23ZM20.5926 18.5409C22.124 16.5502 23 14.1458 23 11.5972H21C21 13.6773 20.2871 15.6579 19.0074 17.3214L20.5926 18.5409ZM12.2825 29.3804L20.5936 18.5396L19.0064 17.3227L10.6953 28.1635L12.2825 29.3804ZM12.0726 29.6021L12.1948 29.4803L10.783 28.0637L10.6608 28.1855L12.0726 29.6021ZM9.71209 29.3733C9.99935 29.755 10.4191 29.9321 10.775 29.9827C11.1311 30.0334 11.5831 29.9804 11.9654 29.6947L10.768 28.0928C10.9057 27.9898 11.0217 27.9977 11.0569 28.0027C11.0921 28.0077 11.2062 28.0326 11.3101 28.1707L9.71209 29.3733ZM1.40639 18.5396L9.7175 29.3804L11.3047 28.1635L2.99361 17.3227L1.40639 18.5396ZM-1 11.5972C-1 14.1458 -0.124038 16.5502 1.4074 18.5409L2.9926 17.3214C1.71293 15.6579 1 13.6773 1 11.5972H-1ZM10.3498 14.7599C8.53231 14.3786 7.39463 12.6891 7.76174 10.9512L5.80493 10.5379C5.19426 13.4287 7.11214 16.1242 9.9391 16.7173L10.3498 14.7599ZM11.5782 14.7623C11.1706 14.8525 10.7682 14.8525 10.3607 14.7623L9.92822 16.715C10.6206 16.8683 11.3182 16.8683 12.0107 16.715L11.5782 14.7623ZM14.1722 10.9263C14.5024 12.7126 13.3153 14.4343 11.6092 14.7559L11.9797 16.7213C14.7958 16.1904 16.6643 13.4051 16.1389 10.5628L14.1722 10.9263ZM11.5856 8.37281C12.939 8.66184 13.9442 9.654 14.1712 10.9209L16.1399 10.5682C15.7558 8.4245 14.0721 6.85871 12.0033 6.41691L11.5856 8.37281ZM7.76174 10.9512C8.14299 9.14643 9.83669 8.00587 11.5891 8.37355L11.9998 6.41617C9.10775 5.80939 6.40145 7.714 5.80493 10.5379L7.76174 10.9512Z" />
+                    </svg>
+                    <span class="button-map__text">
+                        Показать на карте
+                    </span>
+                </a>
+            </div>
+            <div class="shops__wrap">
+                <h2 class="shops__title">
+                    Купить в вашем городе
+                </h2>
+                <a href="javascript: void(0);" title="" class="city">
+                    <span class="city__geo">
+                        <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M0 13C0 5.82729 5.82732 0 13 0C20.1727 0 26 5.82729 26 13C26 20.1727 20.1727 26 13 26C5.82732 26 0 20.1727 0 13ZM24.8182 13C24.8182 6.46599 19.534 1.18182 13 1.18182C6.46603 1.18182 1.18182 6.46599 1.18182 13C1.18182 19.534 6.46603 24.8182 13 24.8182C19.534 24.8182 24.8182 19.534 24.8182 13ZM17.6626 7.68182C17.6218 7.68684 17.5815 7.69613 17.5426 7.70952L6.90625 11.255C6.67154 11.333 6.51024 11.5489 6.502 11.7961C6.49376 12.0433 6.64033 12.2695 6.86932 12.3629L11.6612 14.3388L13.6371 19.1307C13.7305 19.3597 13.9567 19.5062 14.2039 19.498C14.4511 19.4898 14.667 19.3285 14.745 19.0938L18.2905 8.45739C18.355 8.26567 18.317 8.05428 18.1897 7.89706C18.0624 7.73983 17.8636 7.65863 17.6626 7.68182ZM14.1172 17.2102L16.7855 9.19602L8.78054 11.8736L12.3352 13.3324C12.4819 13.3924 12.5984 13.5088 12.6584 13.6555L14.1172 17.2102Z">
+                            </path>
+                        </svg>
+                    </span>
+                    <p class="city__name">
+                        Нижний Новгород
+                    </p>
+                    <span class="city__arrow">
+                        <svg width="10" height="7" viewBox="0 0 10 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1.5 1.5L5.5 5.5" stroke-linecap="square" />
+                            <path d="M9.5 1.5L5.5 5.5" stroke-linecap="square" />
+                        </svg>
+                    </span>
+                </a>
+            </div>
+            <div class="shops__cards">
+                <a href="javascript: void(0);" title="" class="shops-card">
+                    <h3 class="shops-card__name">
+                        Фирменный салон ESTET
+                    </h3>
+                    <p class="shops-card__adres">
+                        Советский район, ул. Бекетова, д.13, литер "А", СЦ Бекетов, 3
+                    </p>
+                </a>
+                <a href="javascript: void(0);" title="" class="shops-card shops-card--even">
+                    <h3 class="shops-card__name">
+                        Фирменный салон ESTET
+                    </h3>
+                    <p class="shops-card__adres">
+                        г. Новокузнецк, Октябрьский проспект, 13
+                    </p>
+                </a>
+                <a href="javascript: void(0);" title="" class="shops-card">
+                    <h3 class="shops-card__name">
+                        Фирменный салон ESTET
+                    </h3>
+                    <p class="shops-card__adres">
+                        г. Ульяновск, ул.Шолмова 20, ТЦ СтройГрад, 3 этаж, салон 85
+                    </p>
+                </a>
+                <a href="javascript: void(0);" title="" class="shops-card shops-card--even">
+                    <h3 class="shops-card__name">
+                        Фирменный салон ESTET
+                    </h3>
+                    <p class="shops-card__adres">
+                        г. Новокузнецк, Октябрьский проспект, 13
+                    </p>
+                </a>
+                <a href="javascript: void(0);" title="" class="shops-card shops-card--desktop shops-card--1730px">
+                    <h3 class="shops-card__name">
+                        Фирменный салон ESTET
+                    </h3>
+                    <p class="shops-card__adres">
+                        г. Хабаровск, ул. Ленинградская 28, ТЦ ЭкоДом, сектор дверей
+                    </p>
+                </a>
+                <a href="javascript: void(0);" title="" class="shops-card shops-card--desktop shops-card--2045px shops-card--even">
+                    <h3 class="shops-card__name">
+                        Фирменный салон ESTET
+                    </h3>
+                    <p class="shops-card__adres">
+                        г. Самара, ул. Красноармейская, д.1, ТЦ "Кубатура", к. 1, 1 этаж, секция 117.6
+                    </p>
+                </a>
+                <a href="javascript: void(0);" title="" class="shops-card shops-card--desktop shops-card--2385px">
+                    <h3 class="shops-card__name">
+                        Фирменный салон ESTET
+                    </h3>
+                    <p class="shops-card__adres">
+                        Советский район, ул. Бекетова, д.13, литер "А", СЦ Бекетов, 3
+                    </p>
+                </a>
+                <a href="javascript: void(0);" title="" class="shops-card shops-card--desktop shops-card--even">
+                    <h3 class="shops-card__name">
+                        Фирменный салон ESTET
+                    </h3>
+                    <p class="shops-card__adres">
+                        г. Самара, ул. Красноармейская, д.1, ТЦ "Кубатура", к. 1, 1 этаж, секция 117.6
+                    </p>
+                </a>
+            </div>
+            <div class="shops-buttons">
+                <a href="javascript: void(0);" title="" class="shops-buttons__all">
+                    Все салоны
+                </a>
+                <div class="shops-buttons__arrow">
+                    <a href="javascript: void(0);" title="" class="arrow-prev arrow-prev--shops">
+                        <svg width="61" height="9" viewBox="0 0 61 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M60.5 4H61V5H60.5V4ZM0.146446 4.85355C-0.0488167 4.65829 -0.0488167 4.34171 0.146446 4.14645L3.32843 0.964466C3.52369 0.769204 3.84027 0.769204 4.03553 0.964466C4.2308 1.15973 4.2308 1.47631 4.03553 1.67157L1.20711 4.5L4.03553 7.32843C4.2308 7.52369 4.2308 7.84027 4.03553 8.03553C3.84027 8.2308 3.52369 8.2308 3.32843 8.03553L0.146446 4.85355ZM60.5 5H0.5V4H60.5V5Z" />
+                        </svg>
+                    </a>
+                    <a href="javascript: void(0);" title="" class="arrow-next arrow-next--shops">
+                        <svg width="61" height="9" viewBox="0 0 61 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0.5 4H0V5H0.5V4ZM60.8536 4.85355C61.0488 4.65829 61.0488 4.34171 60.8536 4.14645L57.6716 0.964466C57.4763 0.769204 57.1597 0.769204 56.9645 0.964466C56.7692 1.15973 56.7692 1.47631 56.9645 1.67157L59.7929 4.5L56.9645 7.32843C56.7692 7.52369 56.7692 7.84027 56.9645 8.03553C57.1597 8.2308 57.4763 8.2308 57.6716 8.03553L60.8536 4.85355ZM0.5 5H60.5V4H0.5V5Z" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="footer-nav">
+            <ul class="footer-list">
+                <li class="footer-list__item">
+                    <a href="javascript: void(0);" title="" class="footer-list__link footer-list__link--top footer-list__link--title">
+                        Продукция
+                    </a>
+                    <ul class="footer-list--secondary">
+                        <li class="footer-list__item footer-list__item--secondary">
+                            <a href="javascript: void(0);" title="" class="footer-list__link">
+                                Межкомнатные двери
+                            </a>
+                        </li>
+                        <li class="footer-list__item footer-list__item--secondary">
+                            <a href="javascript: void(0);" title="" class="footer-list__link">
+                                Входные двери
+                            </a>
+                        </li>
+                        <li class="footer-list__item footer-list__item--secondary">
+                            <a href="javascript: void(0);" title="" class="footer-list__link">
+                                Скрытые двери
+                            </a>
+                        </li>
+                        <li class="footer-list__item footer-list__item--secondary">
+                            <a href="javascript: void(0);" title="" class="footer-list__link">
+                                Межкомнатные перегородки
+                            </a>
+                        </li>
+                        <li class="footer-list__item footer-list__item--secondary">
+                            <a href="javascript: void(0);" title="" class="footer-list__link">
+                                Декоративные рейки
+                            </a>
+                        </li>
+                        <li class="footer-list__item footer-list__item--secondary">
+                            <a href="javascript: void(0);" title="" class="footer-list__link">
+                                Стеновые панели
+                            </a>
+                        </li>
+                        <li class="footer-list__item footer-list__item--secondary">
+                            <a href="javascript: void(0);" title="" class="footer-list__link">
+                                Раздвижные двери
+                            </a>
+                        </li>
+                        <li class="footer-list__item footer-list__item--secondary">
+                            <a href="javascript: void(0);" title="" class="footer-list__link">
+                                Плинтусы
+                            </a>
+                        </li>
+                        <li class="footer-list__item footer-list__item--secondary">
+                            <a href="javascript: void(0);" title="" class="footer-list__link">
+                                Напольные покрытия
+                            </a>
+                        </li>
+                        <li class="footer-list__item footer-list__item--secondary">
+                            <a href="javascript: void(0);" title="" class="footer-list__link">
+                                Мебель
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="footer-list__item">
+                    <a href="javascript: void(0);" title="" class="footer-list__link footer-list__link--top footer-list__link--title">
+                        Декор и аксессуары
+                    </a>
+                    <ul class="footer-list--secondary">
+                        <li class="footer-list__item footer-list__item--secondary">
+                            <a href="javascript: void(0);" title="" class="footer-list__link">
+                                Декоративное оформление
+                            </a>
+                        </li>
+                        <li class="footer-list__item footer-list__item--secondary">
+                            <a href="javascript: void(0);" title="" class="footer-list__link">
+                                Фурнитура
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="footer-list__item">
+                    <a href="javascript: void(0);" title="" class="footer-list__link footer-list__link--top footer-list__link--title safari">
+                        Покупателям
+                    </a>
+                    <ul class="footer-list--secondary">
+                        <li class="footer-list__item footer-list__item--secondary">
+                            <a href="javascript: void(0);" title="" class="footer-list__link">
+                                Полезно
+                            </a>
+                        </li>
+                        <li class="footer-list__item footer-list__item--secondary">
+                            <a href="javascript: void(0);" title="" class="footer-list__link">
+                                Выездной консультант
+                            </a>
+                        </li>
+                        <li class="footer-list__item footer-list__item--secondary">
+                            <a href="javascript: void(0);" title="" class="footer-list__link">
+                                Акции и промокоды
+                            </a>
+                        </li>
+                        <li class="footer-list__item footer-list__item--secondary">
+                            <a href="javascript: void(0);" title="" class="footer-list__link">
+                                Оплата и гарантия
+                            </a>
+                        </li>
+                        <li class="footer-list__item footer-list__item--secondary">
+                            <a href="javascript: void(0);" title="" class="footer-list__link">
+                                Рассрочка и кредит
+                            </a>
+                        </li>
+                        <li class="footer-list__item footer-list__item--secondary">
+                            <a href="javascript: void(0);" title="" class="footer-list__link">
+                                Доставка и установка
+                            </a>
+                        </li>
+                        <li class="footer-list__item footer-list__item--secondary">
+                            <a href="javascript: void(0);" title="" class="footer-list__link">
+                                Советы и рекомендации
+                            </a>
+                        </li>
+                        <li class="footer-list__item footer-list__item--secondary">
+                            <a href="javascript: void(0);" title="" class="footer-list__link">
+                                Дизайн-проекты
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="footer-list__item">
+                    <a href="javascript: void(0);" title="" class="footer-list__link footer-list__link--top footer-list__link--title">
+                        Информация
+                    </a>
+                    <ul class="footer-list--secondary">
+                        <li class="footer-list__item footer-list__item--secondary">
+                            <a href="javascript: void(0);" title="" class="footer-list__link">
+                                Покрытия
+                            </a>
+                        </li>
+                        <li class="footer-list__item footer-list__item--secondary">
+                            <a href="javascript: void(0);" title="" class="footer-list__link">
+                                Стекла
+                            </a>
+                        </li>
+                        <li class="footer-list__item footer-list__item--secondary">
+                            <a href="javascript: void(0);" title="" class="footer-list__link">
+                                Патина
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="footer-list__item footer-list__item--main">
+                    <a href="javascript: void(0);" title="" class="footer-list__link footer-list__link--title">
+                        Где купить
+                    </a>
+                </li>
+                <li class="footer-list__item footer-list__item--main">
+                    <a href="javascript: void(0);" title="" class="footer-list__link footer-list__link--title">
+                        Дизайнерам
+                    </a>
+                </li>
+                <li class="footer-list__item">
+                    <a href="javascript: void(0);" title="" class="footer-list__link footer-list__link--top footer-list__link--title">
+                        Компания
+                    </a>
+                    <ul class="footer-list--secondary">
+                        <li class="footer-list__item footer-list__item--secondary">
+                            <a href="javascript: void(0);" title="" class="footer-list__link">
+                                О нас
+                            </a>
+                        </li>
+                        <li class="footer-list__item footer-list__item--secondary">
+                            <a href="javascript: void(0);" title="" class="footer-list__link">
+                                Производство
+                            </a>
+                        </li>
+                        <li class="footer-list__item footer-list__item--secondary">
+                            <a href="javascript: void(0);" title="" class="footer-list__link">
+                                Новости
+                            </a>
+                        </li>
+                        <li class="footer-list__item footer-list__item--secondary">
+                            <a href="javascript: void(0);" title="" class="footer-list__link">
+                                Сертификаты
+                            </a>
+                        </li>
+                        <li class="footer-list__item footer-list__item--secondary">
+                            <a href="javascript: void(0);" title="" class="footer-list__link">
+                                Отзывы
+                            </a>
+                        </li>
+                        <li class="footer-list__item footer-list__item--secondary">
+                            <a href="javascript: void(0);" title="" class="footer-list__link">
+                                Вакансии
+                            </a>
+                        </li>
+                        <li class="footer-list__item footer-list__item--secondary">
+                            <a href="javascript: void(0);" title="" class="footer-list__link">
+                                Дилерам
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="footer-green">
+            <div class="footer-green__wrap">
+                <h2 class="footer-green__title">
+                    Остались вопросы? Напишите нам.
+                </h2>
+                <a href="javascript:void(0);" title=""
+                    class="button button--clear button--service button--footer">
+                    Обратиться
+                </a>
+            </div>
+            <a href="javascript:void(0);" title="" class="footer-green__link">
+                <span class="footer-green__text">
+                    Помощь в подборе
+                </span>
+                <svg viewBox="0 0 125 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M0.5 4H0V5H0.5V4ZM124.854 4.85355C125.049 4.65829 125.049 4.34171 124.854 4.14645L121.672 0.964466C121.476 0.769204 121.16 0.769204 120.964 0.964466C120.769 1.15973 120.769 1.47631 120.964 1.67157L123.793 4.5L120.964 7.32843C120.769 7.52369 120.769 7.84027 120.964 8.03553C121.16 8.2308 121.476 8.2308 121.672 8.03553L124.854 4.85355ZM0.5 5H124.5V4H0.5V5Z" />
+                </svg>
+            </a>
+        </div>
+        <div class="footer-black">
+            <div class="footer-black__social">
+                <a href="javascript:void(0);" title="" class="footer-black__link footer-black__link--instagram">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M12 0C8.741 0 8.333 0.014 7.053 0.072C2.695 0.272 0.273 2.69 0.073 7.052C0.014 8.333 0 8.741 0 12C0 15.259 0.014 15.668 0.072 16.948C0.272 21.306 2.69 23.728 7.052 23.928C8.333 23.986 8.741 24 12 24C15.259 24 15.668 23.986 16.948 23.928C21.302 23.728 23.73 21.31 23.927 16.948C23.986 15.668 24 15.259 24 12C24 8.741 23.986 8.333 23.928 7.053C23.732 2.699 21.311 0.273 16.949 0.073C15.668 0.014 15.259 0 12 0ZM12 2.163C15.204 2.163 15.584 2.175 16.85 2.233C20.102 2.381 21.621 3.924 21.769 7.152C21.827 8.417 21.838 8.797 21.838 12.001C21.838 15.206 21.826 15.585 21.769 16.85C21.62 20.075 20.105 21.621 16.85 21.769C15.584 21.827 15.206 21.839 12 21.839C8.796 21.839 8.416 21.827 7.151 21.769C3.891 21.62 2.38 20.07 2.232 16.849C2.174 15.584 2.162 15.205 2.162 12C2.162 8.796 2.175 8.417 2.232 7.151C2.381 3.924 3.896 2.38 7.151 2.232C8.417 2.175 8.796 2.163 12 2.163ZM5.838 12C5.838 8.597 8.597 5.838 12 5.838C15.403 5.838 18.162 8.597 18.162 12C18.162 15.404 15.403 18.163 12 18.163C8.597 18.163 5.838 15.403 5.838 12ZM12 16C9.791 16 8 14.21 8 12C8 9.791 9.791 8 12 8C14.209 8 16 9.791 16 12C16 14.21 14.209 16 12 16ZM16.965 5.595C16.965 4.8 17.61 4.155 18.406 4.155C19.201 4.155 19.845 4.8 19.845 5.595C19.845 6.39 19.201 7.035 18.406 7.035C17.61 7.035 16.965 6.39 16.965 5.595Z" />
+                    </svg>
+                </a>
+                <a href="javascript:void(0);" title="" class="footer-black__link footer-black__link--facebook">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M0 24L1.687 17.837C0.646 16.033 0.099 13.988 0.1 11.891C0.103 5.335 5.438 0 11.993 0C15.174 0.001 18.16 1.24 20.406 3.488C22.651 5.736 23.887 8.724 23.886 11.902C23.883 18.459 18.548 23.794 11.993 23.794C10.003 23.793 8.042 23.294 6.305 22.346L0 24ZM6.597 20.193C8.273 21.188 9.873 21.784 11.989 21.785C17.437 21.785 21.875 17.351 21.878 11.9C21.88 6.438 17.463 2.01 11.997 2.008C6.545 2.008 2.11 6.442 2.108 11.892C2.107 14.117 2.759 15.783 3.854 17.526L2.855 21.174L6.597 20.193ZM17.5775 14.4619C17.7848 14.5619 17.9245 14.6293 17.984 14.729C18.059 14.853 18.059 15.448 17.811 16.143C17.563 16.837 16.376 17.471 15.805 17.556C15.293 17.632 14.645 17.664 13.933 17.438C13.502 17.301 12.948 17.118 12.239 16.812C9.458 15.6113 7.57778 12.9181 7.21703 12.4014C7.19108 12.3642 7.173 12.3383 7.163 12.325L7.15947 12.3203C6.9989 12.1056 5.95 10.7029 5.95 9.251C5.95 7.88419 6.62033 7.16763 6.93028 6.83632C6.95209 6.813 6.97212 6.79159 6.99 6.772C7.262 6.474 7.584 6.4 7.782 6.4L8.352 6.41C8.3732 6.41105 8.39526 6.41092 8.41806 6.41078C8.59104 6.40974 8.80719 6.40845 9.021 6.92C9.09715 7.10344 9.20629 7.36939 9.32302 7.65387C9.58493 8.29211 9.88512 9.02363 9.937 9.126C10.012 9.275 10.061 9.449 9.962 9.647C9.94673 9.67738 9.93266 9.70601 9.91922 9.73333C9.84466 9.88498 9.78995 9.99626 9.662 10.142C9.61217 10.2002 9.56078 10.2628 9.50943 10.3255C9.40723 10.4501 9.30519 10.5745 9.216 10.663C9.068 10.811 8.913 10.972 9.086 11.269C9.259 11.567 9.856 12.54 10.739 13.328C11.6873 14.1744 12.5121 14.5321 12.9309 14.7138C13.0134 14.7495 13.0801 14.7785 13.129 14.803C13.426 14.952 13.6 14.927 13.773 14.729C13.946 14.531 14.516 13.861 14.714 13.564C14.913 13.266 15.111 13.316 15.383 13.415C15.656 13.514 17.117 14.233 17.414 14.382C17.4724 14.4112 17.5269 14.4375 17.5775 14.4619Z" />
+                    </svg>
+                </a>
+                <a href="javascript:void(0);" title="" class="footer-black__link footer-black__link--youtube">
+                    <svg width="26" height="24" viewBox="0 0 26 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M20.615 1.22504C17.011 0.924376 8.984 0.925599 5.385 1.22504C1.488 1.55015 1.029 4.42722 1 12C1.029 19.5593 1.484 22.4486 5.385 22.775C8.985 23.0744 17.011 23.0756 20.615 22.775C24.512 22.4499 24.971 19.5728 25 12C24.971 4.44066 24.516 1.55137 20.615 1.22504Z"
+                            stroke-width="2" />
+                        <path  d="M10 17V8L18 12.4921L10 17H10Z" />
+                    </svg>
+                </a>
+            </div>
+            <a href="javascript:void(0);" title="" class="footer-black__text">
+                Заказать звонок
+            </a>
+            <div class="footer-black__phone-wrap">
+                <a href="tel:88005513240" title="" class="footer-black__phone">
+                    8 800 551 32 40
+                </a>
+            </div>
+        </div>
+        <div class="footer-grey">
+            <div class="footer-grey__wrap">
+                <a href="index.html" title="" class="logo logo--footer">
+                    <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M4.95183 34.8548H34.8548V4.95183H4.95183V34.8548ZM9.91351 25.3541H27.2549L29.8934 30.3064H9.91351V25.3541ZM25.8374 17.4932H9.91351V22.4451H25.8384L25.8374 17.4932ZM9.91351 9.50021H29.8934L27.2041 14.4528H9.91351V9.50021ZM0 39.8064H39.8067V0H0V39.8064Z">
+                        </path>
+                    </svg>
+                </a>
+                <div class="footer-grey__copy">
+                    <p class="footer-grey__text">
+                        © 2021 Дверные технологии. Все права защищены.<br />
+                        Чувашская республика, Цивильский район, пос. Молодежный, ул. Заводская 1Г
+                    </p>
+                    <a href="javascript:void(0);" title="" class="footer-grey__link">
+                        Политика конфиденциальности
+                    </a>
+                    <div class="kontora-wrap">
+                        <a href="javascript:void(0);" title="" class="kontora">
+                            <svg width="121" height="19" viewBox="0 0 121 19" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <g opacity="0.219">
+                                    <path
+                                        d="M6.735 11.6101L4.89 13.5751V17.9401H0V0.495117H4.89V7.74012L11.64 0.495117H17.07L9.945 8.22012L17.445 17.9401H11.715L6.735 11.6101Z" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M16.6052 13.8748C17.4452 15.2548 18.6002 16.3348 20.0702 17.1148C21.5402 17.8948 23.1902 18.2848 25.0352 18.2848C26.8802 18.2848 28.5302 17.8948 30.0002 17.1148C31.4702 16.3348 32.6252 15.2548 33.4652 13.8748C34.3052 12.4948 34.7252 10.9348 34.7252 9.20977C34.7252 7.46977 34.3052 5.92477 33.4652 4.54477C32.6252 3.16477 31.4702 2.08477 30.0002 1.30477C28.5302 0.524766 26.8802 0.134766 25.0352 0.134766C23.1902 0.134766 21.5402 0.524766 20.0702 1.30477C18.6002 2.08477 17.4452 3.16477 16.6052 4.54477C15.7652 5.92477 15.3452 7.48477 15.3452 9.20977C15.3452 10.9498 15.7652 12.4948 16.6052 13.8748ZM29.1302 11.8198C28.7102 12.5698 28.1552 13.1548 27.4352 13.5748C26.7152 13.9948 25.9202 14.2048 25.0502 14.2048C24.1802 14.2048 23.3852 13.9948 22.6652 13.5748C21.9452 13.1548 21.3902 12.5698 20.9702 11.8198C20.5502 11.0548 20.3402 10.1848 20.3402 9.20977C20.3402 8.21977 20.5502 7.34977 20.9702 6.59977C21.3902 5.84977 21.9452 5.26477 22.6652 4.84477C23.3702 4.42477 24.1652 4.21477 25.0502 4.21477C25.9202 4.21477 26.7152 4.42477 27.4352 4.84477C28.1552 5.26477 28.7102 5.84977 29.1302 6.59977C29.5502 7.36477 29.7602 8.23477 29.7602 9.20977C29.7602 10.1998 29.5502 11.0698 29.1302 11.8198Z" />
+                                    <path
+                                        d="M54.255 10.7701V17.9401H48.66H48.36L40.665 8.64012V17.9401H35.835V0.495117H39.9L47.595 9.79512V0.495117H54.06L49.605 10.7701H54.255Z" />
+                                    <path
+                                        d="M66.8999 0.495117V4.41012H61.5749V17.9401H59.0099H54.4949L58.8599 7.66512L54.2549 7.68012V0.495117H66.8999Z" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M66.99 13.8748C67.83 15.2548 68.985 16.3348 70.455 17.1148C71.925 17.8948 73.575 18.2848 75.42 18.2848C77.265 18.2848 78.915 17.8948 80.385 17.1148C81.855 16.3348 83.01 15.2548 83.85 13.8748C84.69 12.4948 85.11 10.9348 85.11 9.20977C85.11 7.46977 84.69 5.92477 83.85 4.54477C83.01 3.16477 81.855 2.08477 80.385 1.30477C78.915 0.524766 77.265 0.134766 75.42 0.134766C73.575 0.134766 71.925 0.524766 70.455 1.30477C68.985 2.08477 67.83 3.16477 66.99 4.54477C66.15 5.92477 65.73 7.48477 65.73 9.20977C65.73 10.9498 66.15 12.4948 66.99 13.8748ZM79.515 11.8198C79.095 12.5698 78.54 13.1548 77.82 13.5748C77.1 13.9948 76.305 14.2048 75.435 14.2048C74.565 14.2048 73.77 13.9948 73.05 13.5748C72.33 13.1548 71.775 12.5698 71.355 11.8198C70.935 11.0548 70.725 10.1848 70.725 9.20977C70.725 8.21977 70.935 7.34977 71.355 6.59977C71.775 5.84977 72.33 5.26477 73.05 4.84477C73.755 4.42477 74.55 4.21477 75.435 4.21477C76.305 4.21477 77.1 4.42477 77.82 4.84477C78.54 5.26477 79.095 5.84977 79.515 6.59977C79.935 7.36477 80.145 8.23477 80.145 9.20977C80.145 10.1998 79.935 11.0698 79.515 11.8198Z" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M113.25 0.495117H108.39L101.31 16.5151L98.5202 12.4501C99.6152 11.9101 100.455 11.1901 101.055 10.2451C101.64 9.30012 101.94 8.20512 101.94 6.94512C101.94 5.64012 101.625 4.48512 100.995 3.52512C100.365 2.55012 99.4652 1.80012 98.3102 1.27512C97.1402 0.750117 95.7752 0.495117 94.2002 0.495117H86.2202V17.9401H91.1552V13.3051H93.8402L97.0052 17.9401H105.72L107.1 14.5501H114.48L115.845 17.9401H120.975L113.25 0.495117ZM96.1802 8.83512C95.6702 9.27012 94.9052 9.49512 93.8852 9.49512H91.1402V4.38012H93.8852C94.9052 4.38012 95.6702 4.60512 96.1802 5.05512C96.6902 5.50512 96.9452 6.13512 96.9452 6.94512C96.9602 7.77012 96.6902 8.40012 96.1802 8.83512ZM110.79 5.34012L108.54 10.9201H113.04L110.79 5.34012Z" />
+                                </g>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="assets/js/nouislider.min.js"></script>
+    <script src="assets/js/ofi.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="assets/js/slick.min.js"></script>
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>
